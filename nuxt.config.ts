@@ -17,5 +17,11 @@ export default defineNuxtConfig({
                 usePolling: true
             }
         }
+    },
+    components: {
+        dirs: [
+            '~/components',
+            '~/components/sidebar',
+        ]
     }
 })
