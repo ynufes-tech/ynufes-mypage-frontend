@@ -8,6 +8,6 @@
 <style>
 
 html {
-  font-family: 'Klee One', 'Noto Color Emoji', cursive, sans-serif;
+  font-family: 'Zen Maru Gothic', 'Klee One', 'Noto Color Emoji', sans-serif;
 }
 </style>
