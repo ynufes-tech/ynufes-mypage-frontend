@@ -48,6 +48,7 @@
   flex-direction: column;
   color: white;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
+  font-family: 'Zen Maru Gothic', 'Noto Color Emoji', sans-serif;
 
   hr {
     border: 1px solid white;
