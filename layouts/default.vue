@@ -1,8 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="dashboard-root-frame">
-    Layout: default
+  <div id="dashboard-root-frame">
     <sidebar />
     <div id="dashboard-root-content">
       <slot />
