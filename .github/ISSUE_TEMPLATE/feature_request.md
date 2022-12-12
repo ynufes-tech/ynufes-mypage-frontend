@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: "✨\U0001F41B\U0001F4DD\U0001F3A8\U0001F525\U0001F527"
+title: "✨🐛📝🔥🔧"
 labels: ''
 assignees: shion1305, tomoyahiroe
 
