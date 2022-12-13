@@ -3,13 +3,13 @@
 <template>
   <div id="sidebar-frame">
     <nuxt-link id="mypage-logo">
-      <img src="/mypage-logo.webp" alt="logo"/>
+      <img src="/mypage-logo.webp" alt="logo" />
     </nuxt-link>
     <button id="sidebar-profile">
       <v-avatar image="/test-avatar.jpg" size="80"></v-avatar>
       <div class="name"><span>横国あ</span> <span>太郎ああ</span></div>
     </button>
-    <hr/>
+    <hr />
     <nav id="nav-frame" class="nav-button-group">
       <nuxt-link to="/" class="nav-item">
         <v-icon size="x-large">mdi-home</v-icon>
@@ -41,13 +41,14 @@
 #sidebar-frame {
   width: 250px;
   height: 100vh;
-  background: #1D2630;
+  background: #1d2630;
   border-top-right-radius: 60px;
   display: flex;
   align-items: center;
   flex-direction: column;
   color: white;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
+  font-family: "Zen Maru Gothic", "Klee One", "Note Color Emoji", sans-serif;
 
   hr {
     border: 1px solid white;
@@ -85,7 +86,7 @@
   }
 
   &:hover {
-    background: #2C3A4A;
+    background: #2c3a4a;
     scale: 1.05;
   }
 }
@@ -135,7 +136,7 @@
   }
 
   > a:hover {
-    background: #2C3A47;
+    background: #2c3a47;
     scale: 1.05;
   }
 }

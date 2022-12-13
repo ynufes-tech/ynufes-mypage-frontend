@@ -11,6 +11,6 @@ body {
 }
 
 html {
-  font-family: "Zen Maru Gothic", "Klee One", "Noto Color Emoji", sans-serif;
+  font-family: "Klee One", "Noto Color Emoji", sans-serif;
 }
 </style>
