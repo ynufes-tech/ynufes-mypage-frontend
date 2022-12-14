@@ -7,7 +7,7 @@
     </nuxt-link>
     <button id="sidebar-profile">
       <v-avatar image="/test-avatar.jpg" size="80"></v-avatar>
-      <div class="name"><span>横国あ</span> <span>太郎ああ</span></div>
+      <span class="name"><span>横国あ</span> <span>太郎ああ</span></span>
     </button>
     <hr />
     <nav id="nav-frame" class="nav-button-group">
@@ -39,7 +39,7 @@
 
 <style scoped lang="scss">
 #sidebar-frame {
-  width: 250px;
+  width: min(35%, 250px);
   height: 100vh;
   background: #1d2630;
   border-top-right-radius: 60px;
@@ -53,19 +53,19 @@
   hr {
     border: 1px solid white;
     border-radius: 1px;
-    width: 170px;
+    width: 68%;
     margin: 12px auto;
   }
 }
 
 #mypage-logo {
-  width: 150px;
+  width: 70%;
   object-fit: contain;
   margin: 50px 20px 20px 20px;
 
   img {
     object-fit: contain;
-    width: 150px;
+    width: 100%;
   }
 }
 
@@ -80,7 +80,7 @@
   border-radius: 25px;
 
   .name {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
     font-weight: bold;
   }
@@ -116,7 +116,7 @@
     transition: all 0.2s ease-in-out;
     display: flex;
     align-items: center;
-    margin: 3px 25px;
+    margin: 3px 0;
     width: 170px;
     color: white;
     text-decoration: none;
