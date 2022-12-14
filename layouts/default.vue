@@ -3,9 +3,7 @@
 <template>
   <div id="dashboard-root-frame">
     <sidebar />
-    <div id="dashboard-root-content">
-      <slot />
-    </div>
+    <div id="dashboard-root-content"></div>
   </div>
 </template>
 
