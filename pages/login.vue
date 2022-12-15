@@ -6,66 +6,70 @@ definePageMeta({
 
 <template>
   <div class="d-flex m-0">
-    <v-container
-      class="login-button-wrapper d-flex m-0 justify-center align-center"
-    >
-      <div>
-        <v-img class="cite-logo" src="/YNUFES-icon-color.svg"></v-img>
-        <a href="https://www.google.com" class="login-button d-flex">
-          <v-img src="/line_btn_base.png" class="login-button__icon"></v-img>
-          <p>LINEでログイン</p>
-        </a>
-      </div>
+    <v-container class="login-button-wrapper">
+      <v-img class="cite-logo" src="/mypage-logo-dark.webp"></v-img>
+      <a href="https://www.google.com" class="login-button d-flex">
+        <v-img src="/line_btn_base.png" class="login-button__icon"></v-img>
+        <p>LINEでログイン</p>
+      </a>
     </v-container>
-    <v-container class="login-icon-wrapper m-0">
-      <v-img src="/login-page.svg" justify="center" class="w-50"></v-img>
+    <v-container class="login-icon-wrapper mx-0">
+      <v-img src="/login-page.svg" class="login-icon-img"></v-img>
     </v-container>
   </div>
 </template>
 
 <style scoped lang="scss">
 .cite-logo {
-  position: absolute;
-  width: 240px;
-  height: 120px;
-  top: 10%;
-  transform: translateX(5%);
+  width: 100%;
+  height: 60px;
+  margin-bottom: calc((100vh - 60px - 48px - 32px) / 2);
 }
 .login-button {
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: #06c755;
+  height: 48px;
   width: fit-content;
-  font-size: 1.2rem;
+  // font-size: 1.2rem;
   color: #fff;
-  // box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  padding-right: 16px;
+  margin: 0 auto;
 
   &:hover {
     filter: opacity(0.9);
-    // box-shadow: 4px 4px 4px rgba(0, 0, 0, 0);
   }
 
   &__icon {
-    width: 64px;
-    height: 64px;
-    margin-left: 4px;
+    width: 40px;
+    height: 40px;
+    margin: 5px 8px 0 8px;
   }
 
   > p {
-    padding: 16px 10px;
+    padding: 0;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    line-height: 1.5em;
   }
 }
 .login-button-wrapper {
   width: 45vw;
+  max-width: 520px;
+  flex: 0 0 45vw;
 }
 .login-icon-wrapper {
   height: 100vh;
   width: 55vw;
+  flex: 1;
   background-color: #92e3a9;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.login-icon-img {
+  max-height: 480px;
 }
 </style>
