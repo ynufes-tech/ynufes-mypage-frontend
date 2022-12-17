@@ -7,7 +7,7 @@ definePageMeta({
 <template>
   <div class="d-flex m-0">
     <v-container class="login-button-wrapper">
-      <v-img class="cite-logo" src="/mypage-logo-dark.webp"></v-img>
+      <v-img class="site-logo" src="/mypage-logo-dark.webp"></v-img>
       <a href="https://www.google.com" class="login-button d-flex">
         <v-img src="/line_btn_base.png" class="login-button__icon"></v-img>
         <p>LINEでログイン</p>
@@ -20,10 +20,11 @@ definePageMeta({
 </template>
 
 <style scoped lang="scss">
-.cite-logo {
+.site-logo {
   width: 100%;
   height: 60px;
-  margin-bottom: calc((100vh - 60px - 48px - 32px) / 2);
+  margin-top: calc((100vh - 60px - 48px - 32px - 60px) / 2);
+  margin-bottom: 60px;
 }
 .login-button {
   text-decoration: none;
