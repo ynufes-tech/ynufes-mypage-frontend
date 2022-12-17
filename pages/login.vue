@@ -10,7 +10,7 @@ definePageMeta({
       <v-img class="site-logo" src="/mypage-logo-dark.webp"></v-img>
       <a href="https://www.google.com" class="login-button d-flex">
         <v-img src="/line_btn_base.png" class="login-button__icon"></v-img>
-        <p>LINEでログイン</p>
+        <span>LINEでログイン</span>
       </a>
     </v-container>
     <v-container class="login-icon-wrapper mx-0">
@@ -47,7 +47,7 @@ definePageMeta({
     margin: 5px 8px 0 8px;
   }
 
-  > p {
+  > span {
     padding: 0;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
