@@ -23,7 +23,7 @@ definePageMeta({
 .site-logo {
   width: 100%;
   height: 60px;
-  margin-top: calc((100vh - 60px - 48px - 32px - 60px) / 2);
+  margin-top: calc((100svh - 60px - 48px - 32px - 60px) / 2);
   margin-bottom: 60px;
 }
 .login-button {
@@ -32,7 +32,6 @@ definePageMeta({
   background-color: #06c755;
   height: 48px;
   width: fit-content;
-  // font-size: 1.2rem;
   color: #fff;
   padding-right: 16px;
   margin: 0 auto;
@@ -62,7 +61,7 @@ definePageMeta({
   flex: 0 0 45vw;
 }
 .login-icon-wrapper {
-  height: 100vh;
+  height: 100svh;
   width: 55vw;
   flex: 1;
   background-color: #92e3a9;
