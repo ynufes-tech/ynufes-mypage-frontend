@@ -81,7 +81,7 @@
   border-radius: 25px;
 
   .name {
-    font-size: 18px;
+    font-size: 1rem;
     margin-top: 20px;
     font-weight: bold;
   }
@@ -132,7 +132,7 @@
     > div {
       width: calc(100% - 30px);
       text-align: center;
-      font-size: 20px;
+      font-size: 1rem;
     }
   }
 
