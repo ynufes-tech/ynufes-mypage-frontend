@@ -22,4 +22,11 @@
   width: calc(100vw - 180px);
   height: 100%;
 }
+
+@media ((orientation: portrait) and (max-width: 768px)) or (max-height: 576px) {
+  #dashboard-root-content {
+    margin-left: 0;
+    width: 100vw;
+  }
+} ;
 </style>
