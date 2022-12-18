@@ -39,7 +39,8 @@
 
 <style scoped lang="scss">
 #sidebar-frame {
-  width: min(35%, 250px);
+  position: fixed;
+  width: 180px;
   height: 100svh;
   background: #1d2630;
   border-top-right-radius: 60px;
