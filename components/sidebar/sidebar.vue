@@ -17,7 +17,7 @@
       </nuxt-link>
       <nuxt-link to="/todo" class="nav-item">
         <v-icon>mdi-bell</v-icon>
-        <div>To Do</div>
+        <div>ToDo</div>
       </nuxt-link>
       <nuxt-link to="/settings" class="nav-item">
         <v-icon>mdi-cog</v-icon>
@@ -78,7 +78,7 @@
   align-items: center;
   padding: 10px;
   transition: all 0.2s ease-in-out;
-  border-radius: 25px;
+  border-radius: 50px;
 
   .name {
     font-size: 1rem;
@@ -97,7 +97,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
 }
 
 #nav-bottom {
@@ -108,7 +107,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
   padding-bottom: 20px;
 }
 
@@ -133,6 +131,7 @@
       width: calc(100% - 30px);
       text-align: center;
       font-size: 1rem;
+      font-weight: bold;
     }
   }
 
@@ -142,10 +141,50 @@
   }
 }
 /* レスポンシブデザイン ------------------------*/
-@media ((orientation: portrait) and (max-width: 768px)) or (max-height: 576px) {
+@media ((max-aspect-ratio: 9/16) and (max-width: 1024px)) or (max-height: 576px) {
   /* (画面比が縦長かつ画面幅が768px以下)または画面の高さが576pxのとき */
   #sidebar-frame {
     display: none;
+  }
+}
+@media (min-aspect-ratio: 9/16) and (max-width: 1024px) {
+  #sidebar-frame {
+    width: 80px;
+    border-top-right-radius: 0;
+
+    > hr,
+    #mypage-logo,
+    #sidebar-profile {
+      display: none;
+    }
+  }
+
+  .nav-button-group {
+    width: 64px;
+
+    > a {
+      flex-direction: column;
+      width: 64px;
+      height: 64px;
+      padding: 8px 0;
+
+      > i {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      > div {
+        width: 100%;
+        text-align: center;
+        font-size: small;
+        text-align: center;
+      }
+    }
+
+    > a:hover {
+      background: #2c3a47;
+      scale: 1.05;
+    }
   }
 } ;
 </style>
