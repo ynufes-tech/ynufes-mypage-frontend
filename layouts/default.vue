@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: row;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
 }
 
 #dashboard-root-content {

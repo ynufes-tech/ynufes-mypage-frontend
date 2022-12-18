@@ -40,7 +40,7 @@
 <style scoped lang="scss">
 #sidebar-frame {
   width: min(35%, 250px);
-  height: 100vh;
+  height: 100svh;
   background: #1d2630;
   border-top-right-radius: 60px;
   display: flex;
