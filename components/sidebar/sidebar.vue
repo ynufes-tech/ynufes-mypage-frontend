@@ -141,4 +141,11 @@
     scale: 1.05;
   }
 }
+/* レスポンシブデザイン ------------------------*/
+@media ((orientation: portrait) and (max-width: 768px)) or (max-height: 576px) {
+  /* (画面比が縦長かつ画面幅が768px以下)または画面の高さが576pxのとき */
+  #sidebar-frame {
+    display: none;
+  }
+} ;
 </style>
