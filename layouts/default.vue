@@ -23,15 +23,21 @@
   height: 100%;
 }
 
-@media ((min-aspect-ratio: 9/16) and (max-width: 768px)) or (max-height: 576px) {
+@media (max-aspect-ratio: 3/4) and (max-width: 1024px) {
   #dashboard-root-content {
     margin-left: 0;
     width: 100vw;
   }
 }
-@media (min-aspect-ratio: 9/16) and (max-width: 1024px) {
+@media (min-aspect-ratio: 3/4) and (max-width: 1024px) {
   #dashboard-root-content {
     margin-left: 80px;
+    width: 100vw;
+  }
+}
+@media (max-height: 576px) {
+  #dashboard-root-content {
+    margin-left: 0;
     width: 100vw;
   }
 }

@@ -5,9 +5,12 @@
     <nuxt-link id="mypage-logo">
       <img src="/mypage-logo.webp" alt="logo" />
     </nuxt-link>
+    <nuxt-link id="small-sidebar-logo">
+      <img src="/white-ynufes-cube.svg" alt="logo" />
+    </nuxt-link>
     <button id="sidebar-profile">
-      <v-avatar image="/test-avatar.jpg" size="80"></v-avatar>
-      <span class="name"><span>横国あ</span> <span>太郎ああ</span></span>
+      <img src="/test-avatar.jpg" class="user-avatar" />
+      <span class="username"><span>横国あ</span> <span>太郎ああ</span></span>
     </button>
     <hr />
     <nav id="nav-frame" class="nav-button-group">
@@ -50,12 +53,15 @@
   color: white;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
   font-family: "Zen Maru Gothic", "Noto Color Emoji", sans-serif;
+  transition-property: width, border-radius;
+  transition-duration: 1s;
 
   hr {
     border: 1px solid white;
     border-radius: 1px;
     width: 68%;
     margin: 12px auto;
+    opacity: 0.3;
   }
 }
 
@@ -70,6 +76,10 @@
   }
 }
 
+#small-sidebar-logo {
+  display: none;
+}
+
 #sidebar-profile {
   width: 170px;
   display: flex;
@@ -80,7 +90,13 @@
   transition: all 0.2s ease-in-out;
   border-radius: 50px;
 
-  .name {
+  .user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+  }
+
+  .username {
     font-size: 1rem;
     margin-top: 20px;
     font-weight: bold;
@@ -141,21 +157,46 @@
   }
 }
 /* レスポンシブデザイン ------------------------*/
-@media ((max-aspect-ratio: 9/16) and (max-width: 1024px)) or (max-height: 576px) {
+@media ((max-aspect-ratio: 3/4) and (max-width: 1024px)) or (max-height: 576px) {
   /* (画面比が縦長かつ画面幅が768px以下)または画面の高さが576pxのとき */
   #sidebar-frame {
     display: none;
   }
 }
-@media (min-aspect-ratio: 9/16) and (max-width: 1024px) {
+@media (min-aspect-ratio: 3/4) and (max-width: 1024px) {
   #sidebar-frame {
     width: 80px;
     border-top-right-radius: 0;
 
-    > hr,
-    #mypage-logo,
-    #sidebar-profile {
+    .username,
+    #mypage-logo {
       display: none;
+    }
+  }
+
+  #small-sidebar-logo {
+    display: block;
+    width: 64px;
+    height: 64px;
+    padding: 16px;
+    margin: 8px auto;
+    border-radius: 8px;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #2c3a47;
+    }
+  }
+
+  #sidebar-profile {
+    width: 64px;
+    height: 64px;
+    .user-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+      padding: 0;
+      margin: 0;
     }
   }
 
