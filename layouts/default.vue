@@ -18,7 +18,27 @@
 }
 
 #dashboard-root-content {
-  width: calc(100vw - 200px);
+  margin-left: 180px;
+  width: calc(100vw - 180px);
   height: 100%;
+}
+
+@media (max-aspect-ratio: 3/4) and (max-width: 1024px) {
+  #dashboard-root-content {
+    margin-left: 0;
+    width: 100vw;
+  }
+}
+@media (min-aspect-ratio: 3/4) and (max-width: 1024px) {
+  #dashboard-root-content {
+    margin-left: 80px;
+    width: 100vw;
+  }
+}
+@media (max-height: 576px) {
+  #dashboard-root-content {
+    margin-left: 0;
+    width: 100vw;
+  }
 }
 </style>

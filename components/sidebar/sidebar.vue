@@ -5,9 +5,12 @@
     <nuxt-link id="mypage-logo">
       <img src="/mypage-logo.webp" alt="logo" />
     </nuxt-link>
+    <nuxt-link id="small-sidebar-logo">
+      <img src="/white-ynufes-cube.svg" alt="logo" />
+    </nuxt-link>
     <button id="sidebar-profile">
-      <v-avatar image="/test-avatar.jpg" size="80"></v-avatar>
-      <span class="name"><span>横国あ</span> <span>太郎ああ</span></span>
+      <img src="/test-avatar.jpg" class="user-avatar" />
+      <span class="username"><span>横国あ</span> <span>太郎ああ</span></span>
     </button>
     <hr />
     <nav id="nav-frame" class="nav-button-group">
@@ -17,7 +20,7 @@
       </nuxt-link>
       <nuxt-link to="/todo" class="nav-item">
         <v-icon>mdi-bell</v-icon>
-        <div>To Do</div>
+        <div>ToDo</div>
       </nuxt-link>
       <nuxt-link to="/settings" class="nav-item">
         <v-icon>mdi-cog</v-icon>
@@ -39,7 +42,8 @@
 
 <style scoped lang="scss">
 #sidebar-frame {
-  width: min(35%, 250px);
+  position: fixed;
+  width: 180px;
   height: 100svh;
   background: #1d2630;
   border-top-right-radius: 60px;
@@ -49,12 +53,15 @@
   color: white;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
   font-family: "Zen Maru Gothic", "Noto Color Emoji", sans-serif;
+  transition-property: width, border-radius;
+  transition-duration: 1s;
 
   hr {
     border: 1px solid white;
     border-radius: 1px;
     width: 68%;
     margin: 12px auto;
+    opacity: 0.3;
   }
 }
 
@@ -69,6 +76,10 @@
   }
 }
 
+#small-sidebar-logo {
+  display: none;
+}
+
 #sidebar-profile {
   width: 170px;
   display: flex;
@@ -77,10 +88,16 @@
   align-items: center;
   padding: 10px;
   transition: all 0.2s ease-in-out;
-  border-radius: 25px;
+  border-radius: 50px;
 
-  .name {
-    font-size: 18px;
+  .user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+  }
+
+  .username {
+    font-size: 1rem;
     margin-top: 20px;
     font-weight: bold;
   }
@@ -96,7 +113,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
 }
 
 #nav-bottom {
@@ -107,7 +123,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
   padding-bottom: 20px;
 }
 
@@ -131,7 +146,8 @@
     > div {
       width: calc(100% - 30px);
       text-align: center;
-      font-size: 20px;
+      font-size: 1rem;
+      font-weight: bold;
     }
   }
 
@@ -140,4 +156,76 @@
     scale: 1.05;
   }
 }
+/* レスポンシブデザイン ------------------------*/
+@media ((max-aspect-ratio: 3/4) and (max-width: 1024px)) or (max-height: 576px) {
+  /* (画面比が縦長かつ画面幅が768px以下)または画面の高さが576pxのとき */
+  #sidebar-frame {
+    display: none;
+  }
+}
+@media (min-aspect-ratio: 3/4) and (max-width: 1024px) {
+  #sidebar-frame {
+    width: 80px;
+    border-top-right-radius: 0;
+
+    .username,
+    #mypage-logo {
+      display: none;
+    }
+  }
+
+  #small-sidebar-logo {
+    display: block;
+    width: 64px;
+    height: 64px;
+    padding: 16px;
+    margin: 8px auto;
+    border-radius: 8px;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #2c3a47;
+    }
+  }
+
+  #sidebar-profile {
+    width: 64px;
+    height: 64px;
+    .user-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .nav-button-group {
+    width: 64px;
+
+    > a {
+      flex-direction: column;
+      width: 64px;
+      height: 64px;
+      padding: 8px 0;
+
+      > i {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      > div {
+        width: 100%;
+        text-align: center;
+        font-size: small;
+        text-align: center;
+      }
+    }
+
+    > a:hover {
+      background: #2c3a47;
+      scale: 1.05;
+    }
+  }
+} ;
 </style>
