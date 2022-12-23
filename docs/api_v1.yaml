@@ -28,6 +28,7 @@ paths:
               schema:
                 type: string
                 description: エラーメッセージ
+                example: 'エラーメッセージ'
   /user/info:
     get:
       summary: ユーザー情報を取得する
@@ -58,12 +59,11 @@ paths:
               schema:
                 type: string
                 description: エラーメッセージ
+                example: 'エラーメッセージ'
   /user/info/update:
     post:
       summary: ユーザー情報を更新する
       description: ユーザー情報を更新する
-      tags:
-        - RequireAuth
       parameters:
         - name: Authorization
           in: header
@@ -90,7 +90,7 @@ paths:
               schema:
                 type: string
                 description: エラーメッセージ
-#    Schema for UserInfo
+                example: 'エラーメッセージ'
 components:
   schemas:
     UserInfo:
