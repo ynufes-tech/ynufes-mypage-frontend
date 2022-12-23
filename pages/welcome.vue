@@ -30,7 +30,7 @@ export default {
                   <v-text-field
                     v-model="LastName"
                     label="名字"
-                    placeholder="横浜"
+                    placeholder="市川"
                     type="text"
                     required
                   ></v-text-field>
@@ -39,7 +39,7 @@ export default {
                   <v-text-field
                     v-model="FirstName"
                     label="名前"
-                    placeholder="国大"
+                    placeholder="詩恩"
                     type="text"
                     required
                   ></v-text-field>
@@ -51,7 +51,7 @@ export default {
                   <v-text-field
                     v-model="LastNameKana"
                     label="ミョウジ"
-                    placeholder="ヨコハマ"
+                    placeholder="イチカワ"
                     type="text"
                     required
                   ></v-text-field>
@@ -60,7 +60,7 @@ export default {
                   <v-text-field
                     v-model="FirstNameKana"
                     label="ナマエ"
-                    placeholder="クニヒロ"
+                    placeholder="シオン"
                     type="text"
                     required
                   ></v-text-field>
