@@ -11,16 +11,17 @@ export default {
     LastNameKana: "",
     Email: "",
     Gender: "",
+    StudentID: "",
   }),
 };
 </script>
 
 <template>
-  <v-container class="pl-10">
+  <v-container class="mx-auto">
     <h1 class="welcome-title mb-10">初期情報登録画面</h1>
     <v-row
       ><v-col col="12" sm="12" md="12" lg="10">
-        <v-card>
+        <v-card elevation="10">
           <v-form v-model="valid">
             <v-container>
               <v-card-title>お名前</v-card-title>
@@ -91,10 +92,17 @@ export default {
               <v-row>
                 <v-col cols="12">
                   <v-text-field
-                    v-model="StudnetID"
+                    v-model="StudentID"
                     label="７桁の半角数字を入力してください"
                     placeholder="1234567"
                   ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12" xl="12" sm="3" md="2" lg="2" class="mx-auto">
+                  <v-btn size="large" type="submit" color="success" block
+                    >確認</v-btn
+                  >
                 </v-col>
               </v-row>
             </v-container>
