@@ -5,13 +5,13 @@ definePageMeta({
 export default {
   data: () => ({
     valid: false,
-    FirstName: "",
-    LastName: "",
-    FirstNameKana: "",
-    LastNameKana: "",
-    Email: "",
-    Gender: "",
-    StudentID: "",
+    firstName: "",
+    lastName: "",
+    firstNameKana: "",
+    lastNameKana: "",
+    email: "",
+    gender: "",
+    studentID: "",
   }),
 };
 </script>
@@ -28,7 +28,7 @@ export default {
               <v-row>
                 <v-col cols="12" xs="12" sm="6" md="6" lg="6">
                   <v-text-field
-                    v-model="LastName"
+                    v-model="lastName"
                     label="名字"
                     placeholder="市川"
                     type="text"
@@ -37,7 +37,7 @@ export default {
                 </v-col>
                 <v-col cols="12" xs="12" sm="6" md="6" lg="6">
                   <v-text-field
-                    v-model="FirstName"
+                    v-model="firstName"
                     label="名前"
                     placeholder="詩恩"
                     type="text"
@@ -49,7 +49,7 @@ export default {
               <v-row>
                 <v-col cols="12" xs="12" sm="6" md="6" lg="6">
                   <v-text-field
-                    v-model="LastNameKana"
+                    v-model="lastNameKana"
                     label="ミョウジ"
                     placeholder="イチカワ"
                     type="text"
@@ -58,7 +58,7 @@ export default {
                 </v-col>
                 <v-col cols="12" xs="12" sm="6" md="6" lg="6">
                   <v-text-field
-                    v-model="FirstNameKana"
+                    v-model="firstNameKana"
                     label="ナマエ"
                     placeholder="シオン"
                     type="text"
@@ -70,7 +70,7 @@ export default {
               <v-row>
                 <v-col cols="12">
                   <v-text-field
-                    v-model="Email"
+                    v-model="email"
                     label="メールアドレス"
                     placeholder="hoge@gmail.com"
                     type="email"
@@ -81,7 +81,7 @@ export default {
               <v-card-title>性別</v-card-title>
               <v-row>
                 <v-col cols="12">
-                  <v-radio-group v-model="Gender" inline required>
+                  <v-radio-group v-model="gender" inline required>
                     <v-radio label="女性" value="1"></v-radio>
                     <v-radio label="男性" value="0"></v-radio>
                     <v-radio label="回答しない" value="2"></v-radio>
@@ -92,7 +92,7 @@ export default {
               <v-row>
                 <v-col cols="12">
                   <v-text-field
-                    v-model="StudentID"
+                    v-model="studentID"
                     label="７桁の半角数字を入力してください"
                     placeholder="1234567"
                   ></v-text-field>
