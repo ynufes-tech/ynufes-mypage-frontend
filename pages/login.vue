@@ -2,6 +2,8 @@
 definePageMeta({
   layout: false,
 });
+const authToken = useCookie("Authorization");
+authToken.value = "";
 </script>
 
 <template>
