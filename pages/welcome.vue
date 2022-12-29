@@ -1,6 +1,7 @@
 <script lang="ts">
 definePageMeta({
   layout: false,
+  middleware: ["auth"],
 });
 export default {
   data: () => ({

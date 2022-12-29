@@ -9,11 +9,13 @@
   </div>
 </template>
 <script setup>
-import {onBeforeMount, ref} from "vue";
-
-const showLogin = ref(false)
-const showOrgs = ref(false)
+import { onBeforeMount, ref } from "vue";
+definePageMeta({
+  middleware: ["auth"],
+});
+const showLogin = ref(false);
+const showOrgs = ref(false);
 onBeforeMount(() => {
-  console.log(document.cookie)
-})
+  console.log(document.cookie);
+});
 </script>
