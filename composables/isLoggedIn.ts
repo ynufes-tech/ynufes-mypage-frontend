@@ -1,7 +1,8 @@
 export const useIsLoggedIn = async () => {
   const url = "https://ynufes-mypage.shion.pro/api/v1/user/info";
-  // const authToken = useRequestHeaders(["authorization"]);
-  const authToken = "";
+  const cookie = useRequestHeaders(["cookie"]);
+  const prefixLength: number = "Authorization=".length;
+  const authToken = cookie?.cookie?.substring(prefixLength);
 
   if (
     typeof authToken !== "string" ||
@@ -39,5 +40,3 @@ export const useIsLoggedIn = async () => {
     return true;
   }
 };
-
-// {"name_first":"","name_last":"","type":0,"profile_icon_url":"https://profile.line-scdn.net/0hEzrTM20AGlVfLQycG1pkKi99GT98XENHdk1WM216RTEwH1lXJBlXM2ovRWc3Tw9TJEhSYTkoE21TPm0zQXvmYVgdRGJmG1oAdkJQtQ","status":0}
