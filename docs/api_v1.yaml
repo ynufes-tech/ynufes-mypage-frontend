@@ -38,7 +38,7 @@ paths:
           in: header
           description: Cookieに保存されいる認証情報。
           required: true
-          example: 'Bearer+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOi0yODc3NDMxOTIzLCJqdGkiOiJlNnhxMDRraTUyd3ciLCJpYXQiOjE2NzE4MDkzMzMsImlzcyI6InludWZlcy1teXBhZ2Uuc2hpb24ucHJvIn0.YiK1KK7kGSt6rAlgprXiJ4PiKxPCeluwYarV6JL6l2s'
+          example: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOi0yODc3NDMxOTIzLCJqdGkiOiJlNnhxMDRraTUyd3ciLCJpYXQiOjE2NzE4MDkzMzMsImlzcyI6InludWZlcy1teXBhZ2Uuc2hpb24ucHJvIn0.YiK1KK7kGSt6rAlgprXiJ4PiKxPCeluwYarV6JL6l2s'
           schema:
             type: string
       responses:
@@ -69,7 +69,7 @@ paths:
           in: header
           description: Cookieに保存されいる認証情報。
           required: true
-          example: 'Bearer+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOi0yODc3NDMxOTIzLCJqdGkiOiJlNnhxMDRraTUyd3ciLCJpYXQiOjE2NzE4MDkzMzMsImlzcyI6InludWZlcy1teXBhZ2Uuc2hpb24ucHJvIn0.YiK1KK7kGSt6rAlgprXiJ4PiKxPCeluwYarV6JL6l2s'
+          example: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOi0yODc3NDMxOTIzLCJqdGkiOiJlNnhxMDRraTUyd3ciLCJpYXQiOjE2NzE4MDkzMzMsImlzcyI6InludWZlcy1teXBhZ2Uuc2hpb24ucHJvIn0.YiK1KK7kGSt6rAlgprXiJ4PiKxPCeluwYarV6JL6l2s'
           schema:
             type: string
       responses:
