@@ -1,8 +1,6 @@
 export const useIsLoggedIn = async () => {
   const url = "https://ynufes-mypage.shion.pro/api/v1/user/info";
-  const cookie = useRequestHeaders(["cookie"]);
-  const prefixLength: number = "Authorization=".length;
-  const authToken = cookie?.cookie?.substring(prefixLength);
+  const authToken = useCookie("Authorization");
 
   if (
     typeof authToken !== "string" ||
