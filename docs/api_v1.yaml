@@ -38,7 +38,7 @@ paths:
           in: header
           description: Cookieに保存されいる認証情報。
           required: true
-          example: 'Bearer+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOi0yODc3NDMxOTIzLCJqdGkiOiJlNnhxMDRraTUyd3ciLCJpYXQiOjE2NzE4MDkzMzMsImlzcyI6InludWZlcy1teXBhZ2Uuc2hpb24ucHJvIn0.YiK1KK7kGSt6rAlgprXiJ4PiKxPCeluwYarV6JL6l2s'
+          example: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOi0yODc3NDMxOTIzLCJqdGkiOiJlNnhxMDRraTUyd3ciLCJpYXQiOjE2NzE4MDkzMzMsImlzcyI6InludWZlcy1teXBhZ2Uuc2hpb24ucHJvIn0.YiK1KK7kGSt6rAlgprXiJ4PiKxPCeluwYarV6JL6l2s'
           schema:
             type: string
       responses:
@@ -69,18 +69,19 @@ paths:
           in: header
           description: Cookieに保存されいる認証情報。
           required: true
-          example: 'Bearer+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOi0yODc3NDMxOTIzLCJqdGkiOiJlNnhxMDRraTUyd3ciLCJpYXQiOjE2NzE4MDkzMzMsImlzcyI6InludWZlcy1teXBhZ2Uuc2hpb24ucHJvIn0.YiK1KK7kGSt6rAlgprXiJ4PiKxPCeluwYarV6JL6l2s'
+          example: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOi0yODc3NDMxOTIzLCJqdGkiOiJlNnhxMDRraTUyd3ciLCJpYXQiOjE2NzE4MDkzMzMsImlzcyI6InludWZlcy1teXBhZ2Uuc2hpb24ucHJvIn0.YiK1KK7kGSt6rAlgprXiJ4PiKxPCeluwYarV6JL6l2s'
           schema:
             type: string
+      requestBody:
+        description: ユーザー情報
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserUpdateInfo'
       responses:
         '200':
           description: 正常なレスポンス
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/UserInfo'
         '401':
           description: 認証エラー(→ログインページへ)
         '500':
@@ -116,3 +117,34 @@ components:
           type: integer
           description: ユーザー登録状態。基本情報未登録の場合は0, 登録済みの場合は1。(0:未登録, 1:登録済み)
           example: 0
+    UserUpdateInfo:
+      type: object
+      properties:
+        name_first:
+          type: string
+          description: 名前(名)
+          example: '詩恩'
+        name_first_kana:
+          type: string
+          description: 名前(名)のカナ
+          example: 'シオン'
+        name_last:
+          type: string
+          description: 名前(姓)
+          example: '市川'
+        name_last_kana:
+          type: string
+          description: 名前(姓)のカナ
+          example: 'イチカワ'
+        email:
+          type: string
+          description: メールアドレス
+          example: 'shion1305@gmail.com'
+        gender:
+          type: integer
+          description: 性別。0:男性, 1:女性, 2:その他
+          example: 0
+        student-id:
+          type: string
+          description: 学籍番号
+          example: '2164027'
