@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>企画団体マイページへようこそ</h1>
+    <EventLinkCard />
     <!--    <v-btn class="ma-5" color="primary"-->
     <!--           href="https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1234567890&redirect_uri=https%3A%2F%2Fexample.com%2Fauth%3Fkey%3Dvalue&state=12345abcde&scope=profile%20openid&nonce=09876xyz">-->
     <!--      my-btn-->
@@ -9,11 +10,12 @@
   </div>
 </template>
 <script setup>
-import {onBeforeMount, ref} from "vue";
+import { onBeforeMount, ref } from "vue";
+import EventLinkCard from "~~/components/EventLinkCard.vue";
 
-const showLogin = ref(false)
-const showOrgs = ref(false)
+const showLogin = ref(false);
+const showOrgs = ref(false);
 onBeforeMount(() => {
-  console.log(document.cookie)
-})
+  console.log(document.cookie);
+});
 </script>
