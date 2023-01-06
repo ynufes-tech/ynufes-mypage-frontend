@@ -23,5 +23,8 @@ export default defineNuxtConfig({
             '~/components',
             '~/components/sidebar',
         ]
+    },
+    runtimeConfig: {
+        BACKEND_BASE_URL: 'http://localhost:1306/api/v1/'
     }
 })
