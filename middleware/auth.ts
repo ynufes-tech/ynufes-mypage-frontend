@@ -1,4 +1,4 @@
-import { useIsLoggedIn } from "~~/composables/isLoggedIn";
+import { useIsLoggedIn } from "~/composables/useLogin";
 
 export default defineNuxtRouteMiddleware(async (to, from) => {
   if (process.server) {
