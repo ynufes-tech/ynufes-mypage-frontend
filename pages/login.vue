@@ -1,9 +1,13 @@
 <script lang="ts" setup>
+const config = useRuntimeConfig()
 definePageMeta({
   layout: false,
 });
-const authToken = useCookie("Authorization"); // isLoggedInコンポーザブル検証のための２行
-authToken.value = "";
+const goAuthURL = async () => {
+  const {data} = await useFetch(config.public.baseURL + '/api/v1/auth/line/state')
+  console.log(data.value)
+  window.location.href = `https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=${config.public.lineClientID}&redirect_uri=${config.public.callbackURL}&state=+${data.value}&scope=openid%20profile%20email`
+};
 </script>
 
 <template>
