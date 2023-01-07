@@ -1,8 +1,8 @@
-import { useIsLoggedIn } from "~/composables/useLogin";
+import {useLogin} from "~/composables/useLogin";
 
 export default defineNuxtRouteMiddleware(async (to, from) => {
-  if (process.server) {
-    const IsLoggedIn = await useIsLoggedIn();
-    if (!IsLoggedIn) return navigateTo("/login");
-  }
+    const {isSignedIn} = useLogin();
+    if (!isSignedIn) {
+        return "/login";
+    }
 });
