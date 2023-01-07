@@ -2,7 +2,7 @@
 definePageMeta({
   layout: false,
 });
-const authToken = useCookie("Authorization");
+const authToken = useCookie("Authorization"); // isLoggedInコンポーザブル検証のための２行
 authToken.value = "";
 </script>
 
