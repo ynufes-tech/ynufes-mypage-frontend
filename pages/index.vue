@@ -8,14 +8,3 @@
     <!--    <nuxt-link to="/about">Go to about</nuxt-link>-->
   </div>
 </template>
-<script setup>
-import { onBeforeMount, ref } from "vue";
-definePageMeta({
-  middleware: ["auth"],
-});
-const showLogin = ref(false);
-const showOrgs = ref(false);
-onBeforeMount(() => {
-  console.log(document.cookie);
-});
-</script>
