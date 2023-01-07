@@ -26,5 +26,6 @@ export default defineNuxtConfig({
     },
     runtimeConfig: {
         BACKEND_BASE_URL: 'http://localhost:1306/api/v1/'
-    }
+    },
+    ssr: false,
 })
