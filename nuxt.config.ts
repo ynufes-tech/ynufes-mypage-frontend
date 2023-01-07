@@ -25,7 +25,11 @@ export default defineNuxtConfig({
         ]
     },
     runtimeConfig: {
-        BACKEND_BASE_URL: 'http://localhost:1306/api/v1/'
+        // only variables under public are exposed to the client side
+        // refer: https://dev.to/amitgurbani/environment-variables-in-nuxt-3-9p6
+        public: {
+            baseURL: 'http://localhost:1306'
+        }
     },
     ssr: false,
 })
