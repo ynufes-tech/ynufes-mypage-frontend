@@ -4,8 +4,16 @@ definePageMeta({
   layout: false,
 });
 const goAuthURL = async () => {
-  const {data} = await useFetch(config.public.baseURL + '/api/v1/auth/line/state')
-  console.log(data.value)
+  const {data, error} = await useFetch(config.public.baseURL + '/api/v1/auth/line/state', {
+    method: 'GET',
+  })
+  if (error.value) {
+    console.log("CORSが有効になっています。無効化してください")
+    console.log(error.value)
+    return
+  }
+  if (data.value == '')
+    console.log("stateの取得失敗")
   window.location.href = `https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=${config.public.lineClientID}&redirect_uri=${config.public.callbackURL}&state=${data.value}&scope=openid%20profile%20email`
 };
 </script>
