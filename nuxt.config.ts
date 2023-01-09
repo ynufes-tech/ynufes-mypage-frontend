@@ -23,5 +23,15 @@ export default defineNuxtConfig({
             '~/components',
             '~/components/sidebar',
         ]
-    }
+    },
+    runtimeConfig: {
+        // only variables under public are exposed to the client side
+        // refer: https://dev.to/amitgurbani/environment-variables-in-nuxt-3-9p6
+        public: {
+            baseURL: 'http://localhost:1306',
+            callbackURL: 'http://localhost:1306/api/v1/auth/line/callback',
+            lineClientID: process.env.LINE_CLIENT_ID,
+        }
+    },
+    ssr: false,
 })
