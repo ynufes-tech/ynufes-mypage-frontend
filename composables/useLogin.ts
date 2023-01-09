@@ -1,3 +1,4 @@
+// ユーザーのログイン状態管理、基本データ管理を行う
 export const useLogin = () => {
     const config = useRuntimeConfig().public;
     const signInStatus = useState<boolean>('signInStatus', () => false)
@@ -20,6 +21,7 @@ export const useLogin = () => {
         if (error.value != null || !resp.value) {
             console.log('401 Unauthorized')
             console.log(error)
+            authorization.value = ''
             signInStatus.value = false
             return false
         }
