@@ -87,7 +87,8 @@ export default {
 }
 
 .form-card {
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
   font-weight: bold;
   position: relative;
   border-radius: 20px;
@@ -133,6 +134,9 @@ export default {
     font-size: 15px;
     text-align: center;
     width: 220px;
+  }
+  &:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   }
 }
 
