@@ -10,6 +10,7 @@
     <!--    <nuxt-link to="/about">Go to about</nuxt-link>-->
   </main>
 </template>
+<<<<<<< HEAD
 <script setup>
 import { onBeforeMount, ref } from "vue";
 
@@ -27,3 +28,5 @@ onBeforeMount(() => {
   margin: 40px 0;
 }
 </style>
+=======
+>>>>>>> origin/main
