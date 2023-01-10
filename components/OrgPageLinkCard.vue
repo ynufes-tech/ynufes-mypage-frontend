@@ -2,37 +2,48 @@
 
 <template>
   <NuxtLink class="org-page-link">
-    <v-card elevation="8" width="200" height="200" class="org-page-link-card">
-      <p class="event-title">22常盤</p>
-      <h2 class="org-page-title">プログラミングサークル Lumos</h2>
+    <v-card elevation="4" width="200" height="200" class="org-page-link-card">
+      <div class="link-card-titile-wrapper">
+        <p class="event-title">22常盤</p>
+        <h2 class="org-page-title">プログラミングサークル Lumos</h2>
+      </div>
+      <div class="link-card-text"><span>団体ページへ移動する</span></div>
     </v-card>
   </NuxtLink>
 </template>
 
 <style scoped lang="scss">
 .org-page-link {
-  width: 200px;
-  height: 200px;
+  cursor: pointer;
+
   .org-page-link-card {
-    padding: 8px 12px;
+    width: 200px;
+    height: 200px;
+    position: relative;
     font-family: "Zen Maru Gothic";
     text-align: center;
-    position: relative;
     background-color: #36c678;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
     color: #fff;
     border-radius: 20px;
-    .event-title {
+
+    .link-card-title-wrapper {
+      padding: 8px 12px;
       font-size: 1.2rem;
-      font-weight: bold;
-      font-weight: 500;
-      margin: 10px 0;
+      .org-page-title {
+        line-height: 1.5rem;
+        font-weight: 700;
+      }
     }
-    .org-page-title {
-      font-size: 1.2rem;
-      line-height: 1.5rem;
-      font-weight: 700;
+
+    .link-card-text {
+      width: 100%;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
     }
+
     &:hover {
       transform: scale(0.95);
     }
