@@ -62,6 +62,7 @@ const status_color = () => {
 <template>
   <div class="form-card" :style="{'--statusColor': status_color()}">
     <h2><span>{{ props.title }}</span></h2>
+    <hr/>
     <div class="status_row"><img alt="status_icon" class="status_icon" :src="status_image()"/>
       <div class="status_message">{{ status_mes() }}</div>
     </div>
@@ -100,6 +101,10 @@ export default {
   display: flex;
   flex-direction: column;
 
+  > hr {
+    margin: 0 10px;
+  }
+
   h2 {
     display: flex;
     justify-content: center;
@@ -135,6 +140,7 @@ export default {
     text-align: center;
     width: 220px;
   }
+
   &:hover {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   }
