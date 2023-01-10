@@ -19,6 +19,7 @@
 
 #dashboard-root-content {
   margin-left: 180px;
+  padding-left: 20px;
   width: calc(100vw - 180px);
   height: 100%;
 }

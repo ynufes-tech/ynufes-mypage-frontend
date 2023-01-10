@@ -1,6 +1,5 @@
 <script lang="ts">
 definePageMeta({
-  layout: false,
 });
 export default {
   data: () => ({

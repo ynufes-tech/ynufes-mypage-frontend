@@ -6,14 +6,25 @@
     <!--      my-btn-->
     <!--    </v-btn>-->
     <!--    <nuxt-link to="/about">Go to about</nuxt-link>-->
+    <div class="cards">
+      <FormCard :status="1" title="受理済みのフォーム"/>
+      <FormCard :status="2" title="提出済みのフォーム"/>
+      <FormCard :status="3" title="期限内未提出のフォーム"/>
+      <FormCard :status="4" title="期限間近未提出のフォーム"/>
+      <FormCard :status="5" title="期限超過未提出のフォーム"/>
+    </div>
   </div>
 </template>
+<style lang="scss" scoped>
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1000px;
+  gap: 10px;
+}
+</style>
 <script setup>
-import {onBeforeMount, ref} from "vue";
+import FormCard from "../components/org/FormLinkCard";
 
-const showLogin = ref(false)
-const showOrgs = ref(false)
-onBeforeMount(() => {
-  console.log(document.cookie)
-})
 </script>
