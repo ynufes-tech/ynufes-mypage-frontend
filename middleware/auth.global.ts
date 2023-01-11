@@ -22,7 +22,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
         return navigateTo("/");
     }
   }
-  if (!isSignedIn()) navigateTo("/login");
+  if (!isSignedIn()) return navigateTo("/login");
   if (getCurrentUser().status === 1) {
     return navigateTo("/welcome");
   }
