@@ -2,12 +2,12 @@
 const props = defineProps({
   orgName: {
     type: String,
-    default: "未登録団体",
+    default: "お散歩サークル てくてく",
   },
 });
 </script>
 <template>
-  <NuxtLink class="org-page-link">
+  <NuxtLink :to="'/org/' + props.orgName" class="org-page-link">
     <v-card elevation="6" class="org-page-link-card">
       <p class="org-name">{{ props.orgName }}</p>
       <div class="link-card-divider"></div>
@@ -18,6 +18,7 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .org-page-link {
+  text-decoration: none;
   cursor: pointer;
   background-color: #fff;
 
