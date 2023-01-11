@@ -10,6 +10,9 @@
 </template>
 
 <style scoped>
+* {
+  box-sizing: border-box;
+}
 #dashboard-root-frame {
   display: flex;
   flex-direction: row;
