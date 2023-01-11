@@ -1,6 +1,6 @@
 <template>
   <main class="main-content-wrapper">
-    <h1>企画団体マイページへようこそ</h1>
+    <h1>{{ randomGreetings() }} {{ userName }}さん</h1>
     <div class="count-down"></div>
     <TopOrgPageLinkCard />
   </main>
@@ -13,6 +13,19 @@ const showOrgs = ref(false);
 onBeforeMount(() => {
   console.log(document.cookie);
 });
+
+const props = defineProps({
+  userName: {
+    type: String,
+    default: "MyPageユーザ",
+  },
+});
+const greetings = ["こんにちは!", "Hello!", "やっほ〜", "よくぞ参った！"];
+function randomGreetings() {
+  const length = greetings.length;
+  const randomIndex = Math.floor(Math.random() * length);
+  return greetings[randomIndex];
+}
 </script>
 <style>
 .main-content-wrapper {
