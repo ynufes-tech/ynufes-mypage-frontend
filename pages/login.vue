@@ -8,7 +8,7 @@ const goAuthURL = async () => {
     method: 'GET',
   })
   if (error.value) {
-    console.log("CORSが有効になっています。無効化してください")
+    console.log("STATE値の取得に失敗しました。CORSを無効化してください")
     console.log(error.value)
     return
   }
