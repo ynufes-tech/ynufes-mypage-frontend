@@ -18,6 +18,8 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .org-page-link {
+  display: block;
+  width: fit-content;
   text-decoration: none;
   cursor: pointer;
   background-color: #fff;
