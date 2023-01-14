@@ -1,6 +1,7 @@
 import { useLogin } from "~/composables/useLogin";
 
 export default defineNuxtRouteMiddleware((to, from) => {
+  if(!useRuntimeConfig().public.enableRouting) return;
   const { isSignedIn, getCurrentUser } = useLogin();
   if (to.path.startsWith("/login")) {
     if (!isSignedIn()) return;
@@ -22,7 +23,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
         return navigateTo("/");
     }
   }
-  if (!isSignedIn()) navigateTo("/login");
+  if (!isSignedIn()) return navigateTo("/login");
   if (getCurrentUser().status === 1) {
     return navigateTo("/welcome");
   }
