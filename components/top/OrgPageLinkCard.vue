@@ -70,7 +70,7 @@ const props = defineProps({
     }
 
     &:hover {
-      transform: scale(0.99);
+      scale: 0.99;
     }
   }
 }
