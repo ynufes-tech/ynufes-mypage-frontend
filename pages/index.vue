@@ -14,12 +14,7 @@ onBeforeMount(() => {
   console.log(document.cookie);
 });
 
-const props = defineProps({
-  userName: {
-    type: String,
-    default: "MyPageユーザ",
-  },
-});
+const userName = ref('MyPageユーザ'); //一時的な処置
 const greetings = ["こんにちは!", "Hello!", "やっほ〜", "よくぞ参った！"];
 function randomGreetings() {
   const length = greetings.length;
