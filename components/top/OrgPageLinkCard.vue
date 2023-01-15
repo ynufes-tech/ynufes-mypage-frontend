@@ -8,8 +8,8 @@ const props = defineProps({
 </script>
 <template>
     <v-card elevation="6" class="org-page-link-card">
-      <p class="org-name">{{ props.orgName }}</p>
-      <div class="link-card-divider"></div>
+        <p class="event-name">23常盤</p>
+        <p class="org-name">{{ props.orgName }}</p>
     </v-card>
 </template>
 
@@ -18,17 +18,23 @@ const props = defineProps({
   .org-page-link-card {
     width: 200px;
     height: 200px;
-    padding: 20px 10px 0px;
-    font-family: "Zen Maru Gothic";
+    padding: 0 10px;
     text-align: center;
-    transition: all 0.3s;
+    font-family: "Zen Maru Gothic";
     border-radius: 20px;
+    background-image: url('/logo_background.svg');
     background-color: #fff;
+    transition: all 0.3s;
+
+    .event-name {
+      color: rgba(29, 38, 48, 0.3);
+      font-weight: bold;
+    }
 
     .org-name {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: bold;
-      line-height: 1.2rem;
+      line-height: 2rem;
     }
 
     &:hover {
