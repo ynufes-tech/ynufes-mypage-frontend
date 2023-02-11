@@ -1,10 +1,9 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: "✨🐛📝🔥🔧"
-labels: ''
+title: '✨🐛📝🔥🔧'
+labels: 'feature'
 assignees: shion1305, tomoyahiroe
-
 ---
 
 # 提案の概要

@@ -1,5 +1,3 @@
-<script lang="ts" setup></script>
-
 <template>
   <div id="sidebar-frame">
     <nuxt-link id="mypage-logo">
@@ -52,7 +50,7 @@
   flex-direction: column;
   color: white;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
-  font-family: "Zen Maru Gothic", "Noto Color Emoji", sans-serif;
+  font-family: 'Zen Maru Gothic', 'Noto Color Emoji', sans-serif;
   transition-property: width, border-radius;
   transition-duration: 1s;
 
