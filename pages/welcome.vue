@@ -1,21 +1,31 @@
-<script lang="ts">
+<script lang="ts" setup>
+useHead({ title: 'welcome' })
 definePageMeta({
-  layout: false,
-});
-export default {
-  data: () => ({
+  layout: false
+})
+withDefaults(
+  defineProps<{
+    valid: boolean
+    firstName: string
+    lastName: string
+    firstNameKana: string
+    lastNameKana: string
+    email: string
+    gender: string
+    studentID: string
+  }>(),
+  {
     valid: false,
-    firstName: "",
-    lastName: "",
-    firstNameKana: "",
-    lastNameKana: "",
-    email: "",
-    gender: "",
-    studentID: "",
-  }),
-};
+    firstName: '',
+    lastName: '',
+    firstNameKana: '',
+    lastNameKana: '',
+    email: '',
+    gender: '',
+    studentID: ''
+  }
+)
 </script>
-
 <template>
   <v-container class="mx-auto">
     <h1 class="welcome-title mb-10">初期情報登録画面</h1>

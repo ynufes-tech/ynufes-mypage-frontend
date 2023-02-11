@@ -1,3 +1,6 @@
+<script lang="ts" setup>
+useHead({ title: 'top' })
+</script>
 <template>
   <div>
     <h1>企画団体マイページへようこそ</h1>

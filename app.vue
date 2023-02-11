@@ -1,7 +1,5 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <NuxtLayout />
 </template>
 
 <style>
@@ -15,6 +13,6 @@ body {
 }
 
 html {
-  font-family: "Klee One", "Noto Color Emoji", sans-serif;
+  font-family: 'Klee One', 'Noto Color Emoji', sans-serif;
 }
 </style>
