@@ -1,5 +1,9 @@
-<script lang="ts" setup></script>
-
+<script setup lang="ts">
+useHead({
+  title: 'Top',
+  titleTemplate: (title) => `${title} | YNU-fes`
+})
+</script>
 <template>
   <div id="dashboard-root-frame">
     <sidebar />
@@ -8,11 +12,7 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-* {
-  box-sizing: border-box;
-}
+<style lang="scss" scoped>
 #dashboard-root-frame {
   display: flex;
   flex-direction: row;

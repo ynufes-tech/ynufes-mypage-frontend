@@ -1,3 +1,6 @@
+<script lang="ts" setup>
+useHead({ title: 'top' })
+</script>
 <template>
   <main class="main-content-wrapper">
     <h1>{{ randomGreetings() }} {{ userName }}さん</h1>

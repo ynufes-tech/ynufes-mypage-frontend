@@ -1,0 +1,16 @@
+@use 'vuetify/lib/styles/settings/colors' as c;
+// NOTE: blackにはgrey-darken-4を使う
+$main-color: #003566;
+$sub-color: #abc1d6;
+$accent-color: #fec500;
+$grey-color: #eeeef1;
+$white: #ffffff;
+$black: #333333;
+$colors: (
+  'main-color': $main-color,
+  'sub-color': $sub-color,
+  'accent-color': $accent-color,
+  'grey-color': $grey-color,
+  'white': $white,
+  'black': $black
+);
