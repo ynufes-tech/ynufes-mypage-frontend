@@ -1,30 +1,17 @@
 <script lang="ts" setup>
+import { validation } from '@/assets/validation'
 useHead({ title: 'welcome' })
 definePageMeta({
   layout: false
 })
-withDefaults(
-  defineProps<{
-    valid: boolean
-    firstName: string
-    lastName: string
-    firstNameKana: string
-    lastNameKana: string
-    email: string
-    gender: string
-    studentID: string
-  }>(),
-  {
-    valid: false,
-    firstName: '',
-    lastName: '',
-    firstNameKana: '',
-    lastNameKana: '',
-    email: '',
-    gender: '',
-    studentID: ''
-  }
-)
+const valid = ref<boolean>(false)
+const firstName = ref<string>('')
+const lastName = ref<string>('')
+const firstNameKana = ref<string>('')
+const lastNameKana = ref<string>('')
+const email = ref<string>('')
+const gender = ref<string>('')
+const studentID = ref<string>('')
 </script>
 <template>
   <v-container class="mx-auto">
@@ -38,20 +25,22 @@ withDefaults(
               <v-row>
                 <v-col cols="12" xs="12" sm="6" md="6" lg="6">
                   <v-text-field
-                    v-model="lastName"
+                    v-model.trim="lastName"
                     label="名字"
                     placeholder="市川"
                     type="text"
                     required
+                    :rules="[validation.required, validation.maxString(10)]"
                   ></v-text-field>
                 </v-col>
                 <v-col cols="12" xs="12" sm="6" md="6" lg="6">
                   <v-text-field
-                    v-model="firstName"
+                    v-model.trim="firstName"
                     label="名前"
                     placeholder="詩恩"
                     type="text"
                     required
+                    :rules="[validation.required, validation.maxString(10)]"
                   ></v-text-field>
                 </v-col>
               </v-row>
@@ -59,20 +48,22 @@ withDefaults(
               <v-row>
                 <v-col cols="12" xs="12" sm="6" md="6" lg="6">
                   <v-text-field
-                    v-model="lastNameKana"
+                    v-model.trim="lastNameKana"
                     label="ミョウジ"
                     placeholder="イチカワ"
                     type="text"
                     required
+                    :rules="[validation.required, validation.maxString(10)]"
                   ></v-text-field>
                 </v-col>
                 <v-col cols="12" xs="12" sm="6" md="6" lg="6">
                   <v-text-field
-                    v-model="firstNameKana"
+                    v-model.trim="firstNameKana"
                     label="ナマエ"
                     placeholder="シオン"
                     type="text"
                     required
+                    :rules="[validation.required, validation.maxString(10)]"
                   ></v-text-field>
                 </v-col>
               </v-row>
@@ -80,18 +71,24 @@ withDefaults(
               <v-row>
                 <v-col cols="12">
                   <v-text-field
-                    v-model="email"
+                    v-model.trim="email"
                     label="メールアドレス"
                     placeholder="hoge@gmail.com"
                     type="email"
                     required
+                    :rules="[validation.required, validation.checkEmail]"
                   ></v-text-field>
                 </v-col>
               </v-row>
               <v-card-title>性別</v-card-title>
               <v-row>
                 <v-col cols="12">
-                  <v-radio-group v-model="gender" inline required>
+                  <v-radio-group
+                    v-model="gender"
+                    inline
+                    required
+                    :rules="[validation.required]"
+                  >
                     <v-radio label="女性" value="1"></v-radio>
                     <v-radio label="男性" value="0"></v-radio>
                     <v-radio label="回答しない" value="2"></v-radio>
@@ -102,17 +99,18 @@ withDefaults(
               <v-row>
                 <v-col cols="12">
                   <v-text-field
-                    v-model="studentID"
+                    v-model.trim="studentID"
                     label="７桁の半角数字を入力してください"
                     placeholder="1234567"
+                    :rules="[validation.required]"
                   ></v-text-field>
                 </v-col>
               </v-row>
               <v-row>
                 <v-col cols="12" xl="12" sm="3" md="2" lg="2" class="mx-auto">
-                  <v-btn size="large" type="submit" color="success" block
-                    >確認</v-btn
-                  >
+                  <v-btn size="large" type="submit" color="success" block>
+                    確認
+                  </v-btn>
                 </v-col>
               </v-row>
             </v-container>
@@ -122,5 +120,3 @@ withDefaults(
     </v-row>
   </v-container>
 </template>
-
-<style scoped></style>
