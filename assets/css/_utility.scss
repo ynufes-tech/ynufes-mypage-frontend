@@ -50,9 +50,7 @@ classベースでデザインするためによく使うstyleをクラス化す�
 単一プロパティを表す責務を負うcss class
 */
 .font-family-main {
-  font-family: Roboto, '游ゴシック体', YuGothic, '游ゴシック Medium',
-    'Yu Gothic Medium', '游ゴシック', 'Yu Gothic', 'Hiragino Kaku Gothic ProN',
-    'ヒラギノ角ゴ ProN W3', 'メイリオ' !important;
+  font-family: 'Klee One', 'Noto Color Emoji', sans-serif !important;
 }
 
 $transition: ease, ease-out, ease-in, ease-in-out;
