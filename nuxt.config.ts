@@ -10,6 +10,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width' },
         { name: 'format-detection', content: 'telephone=no' }
       ],
+
       link: [
         {
           rel: 'icon',
@@ -53,7 +54,7 @@ export default defineNuxtConfig({
       baseURL: 'http://localhost:1306',
       callbackURL: 'http://localhost:1306/api/v1/auth/line/callback',
       lineClientID: process.env.LINE_CLIENT_ID,
-      enableRouting: true
+      enableRouting: false
     }
   }
 })
