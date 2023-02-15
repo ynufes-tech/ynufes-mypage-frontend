@@ -1,3 +1,6 @@
+<script setup>
+import FormCard from '../../components/org/FormLinkCard'
+</script>
 <template>
   <main class="main-content-wrapper">
     <h1 style="margin-bottom: 40px">{{ $route.params.orgName }}</h1>
@@ -12,9 +15,6 @@
     </div>
   </main>
 </template>
-<script setup>
-import FormCard from "../../components/org/FormLinkCard";
-</script>
 <style lang="scss" scoped>
 .main-content-wrapper {
   margin: 20px 40px;
