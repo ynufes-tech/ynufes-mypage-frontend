@@ -35,7 +35,7 @@ const props = withDefaults(
           );
         "
       >
-        <img src="white-ynufes-cube.svg" class="float-left pl-4" />
+        <img src="/white-ynufes-cube.svg" class="float-left pl-4"  alt="Icon of YNU FES."/>
         <p class="font-weight-bold text-h5 text-white">
           {{ eventName }}
         </p>
