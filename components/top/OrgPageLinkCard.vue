@@ -19,7 +19,11 @@ const props = withDefaults(
       width="200px"
       height="200px"
     >
-      <p class="org-name text-h5 font-weight-bold pa-2 pt-10">{{ orgName }}</p>
+      <p
+        class="org-name text-h5 font-weight-bold pa-2 pt-10 font-family-accent"
+      >
+        {{ orgName }}
+      </p>
       <div
         class="event-name mt-auto h-25 bg-main-color pt-2"
         style="
@@ -39,9 +43,3 @@ const props = withDefaults(
     </v-card>
   </v-hover>
 </template>
-
-<style scoped lang="scss">
-.org-page-link-card {
-  font-family: 'Zen Maru Gothic';
-}
-</style>
