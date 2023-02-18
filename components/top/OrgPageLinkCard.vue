@@ -35,7 +35,11 @@ const props = withDefaults(
           );
         "
       >
-        <img src="white-ynufes-cube.svg" class="float-left pl-4" />
+        <img
+          src="/white-ynufes-cube.svg"
+          class="float-left pl-4"
+          alt="Icon of YNU FES."
+        />
         <!--22常盤などのイベント名を指すeventName-->
         <p class="font-weight-bold text-h5 text-white">
           {{ eventName }}
