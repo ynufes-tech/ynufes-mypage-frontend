@@ -11,21 +11,21 @@ const props = withDefaults(
 )
 </script>
 <template>
+  <!--企画団体ページに飛ぶためのカードコンポーネントorgPageLinkCard -->
   <v-hover v-slot="{ isHovering, props }">
     <v-card
       v-bind="props"
       :elevation="isHovering ? 24 : 6"
-      class="org-page-link-card d-flex flex-column pa-0 rounded-xl text-center"
+      class="d-flex flex-column pa-0 rounded-xl text-center"
       width="200px"
       height="200px"
     >
-      <p
-        class="org-name text-h5 font-weight-bold pa-2 pt-10 font-family-accent"
-      >
+      <!--企画団体名を指すorgName-->
+      <p class="text-h5 font-weight-bold pa-2 pt-10 font-family-accent">
         {{ orgName }}
       </p>
       <div
-        class="event-name mt-auto h-25 bg-main-color pt-2"
+        class="mt-auto h-25 bg-main-color pt-2"
         style="
           background: linear-gradient(
             40deg,
@@ -36,6 +36,7 @@ const props = withDefaults(
         "
       >
         <img src="white-ynufes-cube.svg" class="float-left pl-4" />
+        <!--22常盤などのイベント名を指すeventName-->
         <p class="font-weight-bold text-h5 text-white">
           {{ eventName }}
         </p>
