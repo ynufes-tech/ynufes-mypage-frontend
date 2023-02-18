@@ -2,44 +2,46 @@
 const props = withDefaults(
   defineProps<{
     orgName: string
+    eventName: string
   }>(),
   {
-    orgName: 'お散歩サークルてくてく'
+    orgName: 'お散歩サークルてくてく',
+    eventName: '22常盤'
   }
 )
 </script>
 <template>
-  <v-card elevation="6" class="org-page-link-card">
-    <p class="event-name">23常盤</p>
-    <p class="org-name">{{ orgName }}</p>
-  </v-card>
+  <v-hover v-slot="{ isHovering, props }">
+    <v-card
+      v-bind="props"
+      :elevation="isHovering ? 24 : 6"
+      class="org-page-link-card d-flex flex-column pa-0 rounded-xl text-center"
+      width="200px"
+      height="200px"
+    >
+      <p class="org-name text-h5 font-weight-bold pa-2 pt-10">{{ orgName }}</p>
+      <div
+        class="event-name mt-auto h-25 bg-main-color pt-2"
+        style="
+          background: linear-gradient(
+            40deg,
+            #1d2630 20%,
+            #213a57 50%,
+            #1c2c87 80%
+          );
+        "
+      >
+        <img src="white-ynufes-cube.svg" class="float-left pl-4" />
+        <p class="font-weight-bold text-h5 text-white">
+          {{ eventName }}
+        </p>
+      </div>
+    </v-card>
+  </v-hover>
 </template>
 
 <style scoped lang="scss">
 .org-page-link-card {
-  width: 200px;
-  height: 200px;
-  padding: 0 10px;
-  text-align: center;
   font-family: 'Zen Maru Gothic';
-  border-radius: 20px;
-  background-image: url('/logo_background.svg');
-  background-color: #fff;
-  transition: all 0.3s;
-
-  .event-name {
-    color: rgba(29, 38, 48, 0.3);
-    font-weight: bold;
-  }
-
-  .org-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 2rem;
-  }
-
-  &:hover {
-    scale: 0.99;
-  }
 }
 </style>
