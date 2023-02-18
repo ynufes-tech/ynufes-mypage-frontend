@@ -10,6 +10,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width' },
         { name: 'format-detection', content: 'telephone=no' }
       ],
+
       link: [
         {
           rel: 'icon',

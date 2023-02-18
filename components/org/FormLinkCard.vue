@@ -88,8 +88,8 @@ const statusColor = () => {
   position: relative;
   border-radius: 20px;
   padding-left: 20px;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   aspect-ratio: 1;
   overflow: hidden;
   display: flex;
@@ -104,39 +104,40 @@ const statusColor = () => {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 25px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 8px;
     height: 50%;
   }
 
   .status_row {
-    height: 90px;
+    height: 70px;
     display: flex;
     flex-direction: row;
+    width: 180px;
 
     .status_icon {
       width: 50px;
-      margin: 20px;
+      margin: 10px;
       aspect-ratio: 1;
     }
 
     .status_message {
       margin: auto 0;
-      font-size: 25px;
+      font-size: 20px;
+      width: 100px;
       text-align: center;
-      width: 120px;
     }
   }
 
   .deadline_field {
     margin: auto 0;
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
-    width: 220px;
   }
 
   &:hover {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    scale: 0.99;
   }
 }
 </style>

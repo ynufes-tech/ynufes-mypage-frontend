@@ -52,6 +52,9 @@ classベースでデザインするためによく使うstyleをクラス化す�
 .font-family-main {
   font-family: 'Klee One', 'Noto Color Emoji', sans-serif !important;
 }
+.font-family-accent {
+  font-family: 'Zen Maru Gothic' !important;
+}
 
 $transition: ease, ease-out, ease-in, ease-in-out;
 $transition-time: (
