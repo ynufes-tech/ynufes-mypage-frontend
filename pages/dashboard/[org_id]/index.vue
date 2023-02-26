@@ -1,5 +1,5 @@
 <script setup>
-import FormCard from '../../components/org/FormLinkCard'
+import FormCard from '../../../components/dashboard/FormLinkCard'
 </script>
 <template>
   <main class="main-content-wrapper">
