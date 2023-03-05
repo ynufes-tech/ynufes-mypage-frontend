@@ -8,7 +8,8 @@ const func = (eventData: string) => {
   <v-sheet width="640" class="mx-auto">
     <v-form>
       <!-- <FormQuestionsCheckbox @update:checkbox="func" /> -->
-      <FormQuestionsRadio @update:radio="func" />
+      <!-- <FormQuestionsRadio @update:radio="func" /> -->
+      <FormQuestionsTextarea @update:textarea="func" />
     </v-form>
     <p>{{ array }}</p>
   </v-sheet>
