@@ -20,7 +20,7 @@ function randomGreetings() {
   <main class="main-content-wrapper">
     <h1>{{ randomGreetings() }} {{ userName }}さん</h1>
     <div class="count-down"></div>
-    <TopOrgPageLinkCard />
+    <AtomsCard />
   </main>
 </template>
 <style>

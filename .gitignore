@@ -11,3 +11,4 @@ dist
 
 .vscode
 .yarnrc.yml
+.DS_Store

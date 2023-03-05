@@ -7,10 +7,10 @@ const func = (eventData: string) => {
 <template>
   <v-sheet width="640" class="mx-auto">
     <v-form>
-      <!-- <FormQuestionsCheckbox @update:checkbox="func" /> -->
-      <!-- <FormQuestionsRadio @update:radio="func" /> -->
-      <!-- <FormQuestionsTextarea @update:textarea="func" /> -->
-      <FormQuestionsText @update:text="func" />
+      <!-- <AtomsFormQuestionsCheckbox @update:checkbox="func" /> -->
+      <!-- <AtomsFormQuestionsRadio @update:radio="func" /> -->
+      <!-- <AtomsFormQuestionsTextarea @update:textarea="func" /> -->
+      <!-- <AtomsFormQuestionsText @update:text="func" /> -->
     </v-form>
     <p>{{ array }}</p>
   </v-sheet>

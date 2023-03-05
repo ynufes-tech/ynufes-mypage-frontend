@@ -1,5 +1,5 @@
 <script setup>
-import FormCard from '../../../components/dashboard/FormLinkCard'
+import FormCard from '../../../components/atoms/card/status'
 </script>
 <template>
   <main class="main-content-wrapper">
