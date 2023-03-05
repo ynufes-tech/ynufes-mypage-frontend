@@ -14,7 +14,14 @@ interface Emits {
 }
 const emits = defineEmits<Emits>()
 const checked = ref<string[]>([])
-const changed = () => {
+const changed = (event: Event) => {
+  if (!(event.target instanceof HTMLInputElement)) return
+  if (!checked.value.includes(event.target.value)) {
+    checked.value.push(event.target.value)
+  } else {
+    const index = checked.value.indexOf(event.target.value)
+    checked.value.splice(index, 1)
+  }
   emits('update:checks', checked.value)
 }
 </script>
@@ -24,15 +31,8 @@ const changed = () => {
     <v-card-title>{{ question }}</v-card-title>
     <v-card-text>{{ description }}</v-card-text>
     <div v-for="option in options">
-      <v-checkbox
-        v-model="checked"
-        :label="option"
-        :value="option"
-        @input="changed"
-      ></v-checkbox>
+      <v-checkbox :label="option" :value="option" @input="changed"></v-checkbox>
     </div>
     <p>{{ checked }}</p>
   </v-card>
 </template>
-
-<style scoped></style>
