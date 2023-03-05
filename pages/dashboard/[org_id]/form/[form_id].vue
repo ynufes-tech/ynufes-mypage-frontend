@@ -1,13 +1,14 @@
 <script setup lang="ts">
-const array = ref<string[]>([])
-const func = (eventData: string[]) => {
+const array = ref<string>()
+const func = (eventData: string) => {
   array.value = eventData
 }
 </script>
 <template>
   <v-sheet width="640" class="mx-auto">
     <v-form>
-      <FormQuestionsCheckbox @update:checks="func" />
+      <!-- <FormQuestionsCheckbox @update:checkbox="func" /> -->
+      <FormQuestionsRadio @update:radio="func" />
     </v-form>
     <p>{{ array }}</p>
   </v-sheet>
