@@ -13,7 +13,7 @@ interface Emits {
 }
 const emits = defineEmits<Emits>()
 const textarea = ref<string>('')
-const changed = (event: Event) => {
+const changed = () => {
   emits('update:textarea', textarea.value)
 }
 </script>
