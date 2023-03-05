@@ -10,7 +10,7 @@ const props = withDefaults(defineProps<Props>(), {
   options: () => ['経済101', '教育1305', '情報基盤センター']
 })
 interface Emits {
-  (e: 'update:checks', checkboxOption: string[]): void
+  (e: 'update:checkbox', checkboxOption: string[]): void
 }
 const emits = defineEmits<Emits>()
 const checked = ref<string[]>([])
@@ -22,17 +22,16 @@ const changed = (event: Event) => {
     const index = checked.value.indexOf(event.target.value)
     checked.value.splice(index, 1)
   }
-  emits('update:checks', checked.value)
+  emits('update:checkbox', checked.value)
 }
 </script>
 
 <template>
-  <v-card width="100%" elevation="2">
+  <v-card elevation="2">
     <v-card-title>{{ question }}</v-card-title>
     <v-card-text>{{ description }}</v-card-text>
     <div v-for="option in options">
       <v-checkbox :label="option" :value="option" @input="changed"></v-checkbox>
     </div>
-    <p>{{ checked }}</p>
   </v-card>
 </template>
