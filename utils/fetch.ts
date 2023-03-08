@@ -3,7 +3,7 @@ import { Response, ErrorType } from '~/types/utils/api'
 
 const config = useRuntimeConfig().public
 
-export async function getRequest<T>(endpoint: string, query: any): Promise<Response<T>> {
+export async function useGetAPI<T>(endpoint: string, query: any): Promise<Response<T>> {
   if (!useCookie('Authorization').value) {
     console.log('no cookie')
     return new Response<T>(null, ErrorType.UNAUTHORIZED)
@@ -29,7 +29,7 @@ export async function getRequest<T>(endpoint: string, query: any): Promise<Respo
   return new Response<T>(respJson, null)
 }
 
-export async function postRequest<T>(endpoint: string, body: any): Promise<Response<T>> {
+export async function usePostAPI<T>(endpoint: string, body: any): Promise<Response<T>> {
   const { data: resp, error } = useFetch(config.baseURL + endpoint, {
     method: 'POST',
     headers: {
