@@ -15,7 +15,12 @@ export class Response<T> {
 }
 
 export enum ErrorType {
-  UNAUTHORIZED = "UNAUTHORIZED",
-  CONNECTION_ERROR = "CONNECTION_ERROR",
-  UNKNOWN_ERROR = "UNKNOWN_ERROR",
+  UNAUTHORIZED = 'UNAUTHORIZED',
+  CONNECTION_ERROR = 'CONNECTION_ERROR',
+  UNKNOWN_ERROR = 'UNKNOWN_ERROR',
+  INVALID_RESPONSE = 'INVALID_RESPONSE',
+}
+
+export function useFieldsChecker(obj: any, fields: string[]): boolean {
+  return fields.every(field => field in obj);
 }
