@@ -9,18 +9,18 @@ onBeforeMount(() => {
 })
 
 const userName = ref('MyPageユーザ') // 一時的な処置
-const greetings = ['こんにちは!', 'Hello!', 'やっほ〜', 'よくぞ参った！']
-function randomGreetings() {
-  const length = greetings.length
-  const randomIndex = Math.floor(Math.random() * length)
-  return greetings[randomIndex]
-}
+// const greetings = ['こんにちは!', 'Hello!', 'やっほ〜', 'よくぞ参った！']
+// function randomGreetings() {
+//   const length = greetings.length
+//   const randomIndex = Math.floor(Math.random() * length)
+//   return greetings[randomIndex]
+// }
 </script>
 <template>
   <main class="main-content-wrapper">
-    <h1>{{ randomGreetings() }} {{ userName }}さん</h1>
+    <!-- <h1>{{ randomGreetings() }} {{ userName }}さん</h1> -->
     <div class="count-down"></div>
-    <AtomsCard />
+    <CardOrgLink />
   </main>
 </template>
 <style>
