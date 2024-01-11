@@ -6,7 +6,7 @@ useHead({
 </script>
 <template>
   <div id="dashboard-root-frame">
-    <OrganismsSidebar />
+    <Sidebar />
     <div id="dashboard-root-content">
       <slot />
     </div>

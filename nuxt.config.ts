@@ -1,4 +1,3 @@
-import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   ssr: false,
   app: {
@@ -26,17 +25,9 @@ export default defineNuxtConfig({
     shim: false,
     strict: true
   },
-  css: ['the-new-css-reset', 'vuetify/styles', '@/assets/css/index.scss'],
-  build: {
-    transpile: ['vuetify']
-  },
-  modules: [
-    (options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
-        if (config.plugins) config.plugins.push(vuetify())
-      })
-    }
-  ],
+  css: ['the-new-css-reset', '@/assets/css/index.scss'],
+  build: {},
+  modules: [],
   vite: {
     define: {
       'process.env.DEBUG': false
