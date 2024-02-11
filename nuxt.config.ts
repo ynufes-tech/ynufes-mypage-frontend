@@ -26,24 +26,24 @@ export default defineNuxtConfig({
     strict: true
   },
   modules: ['nuxt-primevue'],
-  // TODO: CSSの読み込み順序を制御する
+  css: [
+    '@/assets/css/reset.css',
+    '@/assets/css/primevue-theme.css',
+    'primevue/resources/primevue.min.css',
+    'primeicons/primeicons.css',
+    'primeflex/primeflex.css',
+    '@/assets/scss/index.scss'
+  ],
   primevue: {
     options: {
       ripple: true
     },
     components: {
-      include: ['Button']
+      include: '*'
     },
     // theme: 'aura-light-green',
-    cssLayerOrder: [
-      // '@/assets/css/reset.css,primevue/resources/themes/aura-light-green/theme.css'
-    ]
+    cssLayerOrder: ['reset, primevue, primeicons']
   },
-  css: [
-    '@/assets/css/reset.css',
-    'primevue/resources/themes/aura-light-green/theme.css',
-    '@/assets/css/index.scss'
-  ],
   build: {},
   vite: {
     define: {
