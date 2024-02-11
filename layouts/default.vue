@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import AppSidebar from './AppSidebar.vue'
+
 useHead({
   title: 'Top',
   titleTemplate: (title) => `${title} | YNU-fes`
@@ -6,7 +8,7 @@ useHead({
 </script>
 <template>
   <div id="dashboard-root-frame">
-    <Sidebar />
+    <AppSidebar />
     <div id="dashboard-root-content">
       <slot />
     </div>
