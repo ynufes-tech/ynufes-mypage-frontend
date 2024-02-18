@@ -25,9 +25,26 @@ export default defineNuxtConfig({
     shim: false,
     strict: true
   },
-  css: ['the-new-css-reset', '@/assets/css/index.scss'],
+  modules: ['nuxt-primevue'],
+  css: [
+    '@/assets/css/reset.css',
+    '@/assets/css/primevue-theme.css',
+    'primevue/resources/primevue.min.css',
+    'primeicons/primeicons.css',
+    'primeflex/primeflex.css',
+    '@/assets/scss/index.scss'
+  ],
+  primevue: {
+    options: {
+      ripple: true
+    },
+    components: {
+      include: '*'
+    },
+    // theme: 'aura-light-green',
+    cssLayerOrder: ['reset, primevue, primeicons']
+  },
   build: {},
-  modules: [],
   vite: {
     define: {
       'process.env.DEBUG': false
