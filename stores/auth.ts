@@ -1,6 +1,5 @@
 // stores/auth.js
 import { defineStore } from 'pinia'
-import { User } from '~/composables/useLogin'
 
 export const useAuthStore = defineStore('auth', {
   state: (): { token: string, user: User | null } => ({
@@ -32,3 +31,11 @@ export const useAuthStore = defineStore('auth', {
     }
   }
 })
+
+export class User {
+  name_first = ''
+  name_last = ''
+  profile_picture = ''
+  type = 0
+  status = 0
+}
