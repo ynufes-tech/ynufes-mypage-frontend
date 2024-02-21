@@ -15,10 +15,7 @@ export const useLogin = () => {
     const { data: resp, error } = await useFetch(
       config.baseURL + '/api/v1/user/info',
       {
-        method: 'GET',
-        headers: {
-          Authorization: 'Bearer ' + authorization.value
-        }
+        method: 'GET'
       }
     )
     if (error.value != null || !resp.value) {
