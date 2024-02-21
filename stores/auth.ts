@@ -1,9 +1,11 @@
 // stores/auth.js
 import { defineStore } from 'pinia'
+import { User } from '~/composables/useLogin'
 
 export const useAuthStore = defineStore('auth', {
-  state: () => ({
-    token: sessionStorage.getItem('token') || ''
+  state: (): { token: string, user: User | null } => ({
+    token: sessionStorage.getItem('token') || '',
+    user: null
   }),
   actions: {
     setToken(newToken: string) {
@@ -13,6 +15,20 @@ export const useAuthStore = defineStore('auth', {
     clearToken() {
       this.token = ''
       sessionStorage.removeItem('token')
+    },
+    setUser(newUser: User) {
+      this.user = newUser
+    },
+    clearUser() {
+      this.user = null
+    }
+  },
+  getters: {
+    isLoggedIn(): boolean {
+      return this.token !== '' && this.user !== null
+    },
+    getUser(): User | null {
+      return this.user
     }
   }
 })
