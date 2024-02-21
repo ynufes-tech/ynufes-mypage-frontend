@@ -25,7 +25,10 @@ export default defineNuxtConfig({
     shim: false,
     strict: true
   },
-  modules: ['nuxt-primevue'],
+  modules: [
+    'nuxt-primevue',
+    '@pinia/nuxt'
+  ],
   css: [
     '@/assets/css/reset.css',
     '@/assets/css/primevue-theme.css',
