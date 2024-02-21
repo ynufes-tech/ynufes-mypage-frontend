@@ -8,6 +8,11 @@ const useApiClient = () => {
     const token = authStore.token
     const headers: [key: string, value: string][] = token ? [['Authorization', `Bearer ${token}`]] : []
     const response: Response = await $fetch(`${url}?${new URLSearchParams(params)}`, { headers: headers })
+    if (response.status === 401) {
+      authStore.clearToken()
+      authStore.clearUser()
+      throw new Error('Unauthorized')
+    }
     return response.json()
   }
 
@@ -22,6 +27,11 @@ const useApiClient = () => {
       headers,
       body: JSON.stringify(body)
     })
+    if (response.status === 401) {
+      authStore.clearToken()
+      authStore.clearUser()
+      throw new Error('Unauthorized')
+    }
     return response.json()
   }
   return { get, post }
