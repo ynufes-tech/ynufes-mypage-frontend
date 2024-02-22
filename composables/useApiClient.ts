@@ -13,16 +13,19 @@ const useApiClient = () => {
     const headers: [key: string, value: string][] = token
       ? [['Authorization', `Bearer ${token}`]]
       : []
-    const response: Response = await $fetch(
+    const { data, error } = await useFetch(
       `${nuxtConfig.public.baseURL}${url}?${new URLSearchParams(params)}`,
       { headers }
     )
-    if (response.status === 401) {
-      authStore.clearToken()
-      authStore.clearUser()
-      throw new Error('Unauthorized')
+    if (error.value) {
+      if (error.value.statusCode === 401) {
+        authStore.clearToken()
+        authStore.clearUser()
+        throw new Error('Unauthorized')
+      }
+      throw new Error('Failed to fetch')
     }
-    return response.json()
+    return data.value
   }
 
   const post = async (url: string, body: any): Promise<any> => {
@@ -31,7 +34,7 @@ const useApiClient = () => {
       'Content-Type': 'application/json',
       ...(token ? { Authorization: `Bearer ${token}` } : {})
     }
-    const response: Response = await $fetch(
+    const { data, error } = await useFetch(
       `${nuxtConfig.public.baseURL}${url}`,
       {
         method: 'POST',
@@ -39,12 +42,15 @@ const useApiClient = () => {
         body: JSON.stringify(body)
       }
     )
-    if (response.status === 401) {
-      authStore.clearToken()
-      authStore.clearUser()
-      throw new Error('Unauthorized')
+    if (error.value) {
+      if (error.value.statusCode === 401) {
+        authStore.clearToken()
+        authStore.clearUser()
+        throw new Error('Unauthorized')
+      }
+      throw new Error('Failed to fetch')
     }
-    return response.json()
+    return data.value
   }
   return { get, post }
 }

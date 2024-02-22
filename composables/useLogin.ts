@@ -9,7 +9,7 @@ export const useLogin = () => {
     const client = useApiClient()
     try {
       const resp = await client.get('/api/v1/user/info')
-      const json = JSON.parse(resp.value as string)
+      const json = JSON.parse(resp as string)
       authStore.setUser({
         name_first: json.name_first,
         name_last: json.name_last,
