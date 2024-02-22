@@ -1,6 +1,6 @@
 // ユーザーのログイン状態管理、基本データ管理を行う
 import useApiClient from '~/composables/useApiClient'
-import { User, useAuthStore } from '~/stores/auth'
+import { useAuthStore, User } from '~/stores/auth'
 
 export const useLogin = () => {
   const authStore = useAuthStore()
@@ -10,14 +10,16 @@ export const useLogin = () => {
     try {
       const resp = await client.get('/api/v1/user/info')
       const json = JSON.parse(resp as string)
-      authStore.setUser({
+      const user = {
         name_first: json.name_first,
         name_last: json.name_last,
         profile_picture: json.profile_icon_url,
         type: json.type,
         status: json.status
-      } as User)
+      } as User
+      authStore.setUser(user)
     } catch (e) {
+      console.error(e)
       return false
     }
     return true
