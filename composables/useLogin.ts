@@ -1,12 +1,10 @@
 // ユーザーのログイン状態管理、基本データ管理を行う
 import useApiClient from '~/composables/useApiClient'
-import { useAuthStore } from '~/stores/auth'
-import { User } from '~/stores/auth'
+import { User, useAuthStore } from '~/stores/auth'
 
 export const useLogin = () => {
   const authStore = useAuthStore()
 
-  const isSignedIn = (): boolean => authStore.isLoggedIn
   const trySignIn = async () => {
     const client = useApiClient()
     try {
@@ -24,10 +22,22 @@ export const useLogin = () => {
     }
     return true
   }
-  const getCurrentUser = (): User | null => authStore.getUser
+  const getCurrentUser = async (): Promise<User | null> => {
+    if (authStore.getUser) {
+      console.log('authStore.getUser is exist', authStore.getUser)
+      return authStore.getUser
+    }
+    if (authStore.getToken) {
+      console.log('authStore.getUser is not exist', authStore.getUser)
+      await trySignIn()
+      console.log('after trySignin', authStore.getUser)
+      return authStore.getUser
+    }
+    return null
+  }
   const signOut = (): void => {
     authStore.clearToken()
     authStore.clearUser()
   }
-  return { isSignedIn, getCurrentUser, signOut, trySignIn }
+  return { getCurrentUser, signOut, trySignIn }
 }
