@@ -1,30 +1,32 @@
-import { useLogin } from "~/composables/useLogin";
+import { useLogin } from '~/composables/useLogin'
 
-export default defineNuxtRouteMiddleware((to, from) => {
-  if(!useRuntimeConfig().public.enableRouting) return;
-  const { isSignedIn, getCurrentUser } = useLogin();
-  if (to.path.startsWith("/login")) {
-    if (!isSignedIn()) return;
-    switch (getCurrentUser().status) {
+export default defineNuxtRouteMiddleware(async (to, from) => {
+  if (!useRuntimeConfig().public.enableRouting) return
+  const { getCurrentUser } = useLogin()
+  if (to.path.startsWith('/token')) return
+  const user = await getCurrentUser()
+  console.log('user', user)
+  if (to.path.startsWith('/login')) {
+    if (user === null) return
+    switch (user.status) {
       case 1:
-        return navigateTo("/welcome");
+        return navigateTo('/welcome')
       case 2:
-        return navigateTo("/");
+        return navigateTo('/')
       default:
-        return;
+        return
     }
   }
-  if (to.path.startsWith("/welcome")) {
-    if (!isSignedIn()) return navigateTo("/login");
-    switch (getCurrentUser().status) {
+  if (user === null) return navigateTo('/login')
+  if (to.path.startsWith('/welcome')) {
+    switch (user.status) {
       case 1:
-        return;
+        return
       case 2:
-        return navigateTo("/");
+        return navigateTo('/')
     }
   }
-  if (!isSignedIn()) return navigateTo("/login");
-  if (getCurrentUser().status === 1) {
-    return navigateTo("/welcome");
+  if (user.status === 1) {
+    return navigateTo('/welcome')
   }
-});
+})
