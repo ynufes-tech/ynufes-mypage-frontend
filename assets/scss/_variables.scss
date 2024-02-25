@@ -1,15 +1,21 @@
 // NOTE: blackにはgrey-darken-4を使う
-$main-color: #1d2630;
-$sub-color: #e2d9cf;
-$accent-color: #00c2fc;
-$grey-color: #eeeef1;
+$main-background: #f5f6f4;
+$sub-background: #fff;
+$text: #808778;
+$primary: #7ed321;
+$text-link: #80b6f5; 
+$input-border: #ced4da;
 $white: #ffffff;
 $black: #333333;
+$danger: #f66262;
 $colors: (
-  'main-color': $main-color,
-  'sub-color': $sub-color,
-  'accent-color': $accent-color,
-  'grey-color': $grey-color,
+  'text': $text,
+  'main-background': $main-background,
+  'sub-background': $sub-background,
+  'primary': $primary,
+  'text-link': $text-link,
+  'input-border': $input-border,
   'white': $white,
-  'black': $black
+  'black': $black,
+  'danger': $danger
 );
