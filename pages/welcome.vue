@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useLogin } from '~/composables/useLogin'
+import { useUserInfo } from '~/composables/useUserInfo'
 useHead({ title: 'welcome' })
 definePageMeta({
   layout: false
@@ -8,25 +10,35 @@ const lastName = ref<string>('')
 const firstNameKana = ref<string>('')
 const lastNameKana = ref<string>('')
 const email = ref<string>('')
-const gender = ref<string>('')
-const studentID = ref<number>()
+const gender = ref<number>()
+const studentID = ref<string>()
 const checked = ref<boolean>()
 
-const submit = () => {
-  const userInfo = {
-    firstName: firstName.value,
-    lastName: lastName.value,
-    firstNameKana: firstNameKana.value,
-    lastNameKana: lastNameKana.value,
+const submit = async () => {
+  if (!checked.value) {
+    return
+  }
+  const userInfo: UserInfo = {
+    name_first: firstName.value,
+    name_first_kana: firstNameKana.value,
+    name_last: lastName.value,
+    name_last_kana: lastNameKana.value,
     email: email.value,
     gender: gender.value,
-    studentID: studentID.value
+    student_id: studentID.value
   }
+  await useUserInfo().updateUserInfo(userInfo)
+
   console.log(userInfo)
 }
+
+const user = await useLogin().getCurrentUser()
 </script>
 <template>
   <main class="surface-ground w-screen min-h-screen p-3">
+    <div class="flex justify-content-center mb-4">
+      <Avatar :image="user?.profile_picture" size="xlarge" shape="circle" />
+    </div>
     <Card
       class="bg-white shadow-none w-98 m-auto mt-2 border-round-lg"
       style="max-width: 1024px"
