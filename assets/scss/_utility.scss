@@ -1,39 +1,39 @@
-@use './variables' as color;
+@use './colors' as colors;
 /*
 classベースでデザインするためによく使うstyleをクラス化するscss
 */
 .util-color-text {
-  color: color.$text
+  color: colors.$text
 }
 .util-color-text-primary {
-  color: color.$primary
+  color: colors.$primary
 }
 .util-color-text-link {
-  color: color.$text-link
+  color: colors.$text-link
 }
 .util-color-text-danger {
-  color: color.$danger
+  color: colors.$danger
 }
 .util-color-bg-primary {
-  background-color: color.$primary
+  background-color: colors.$primary
 }
 .util-color-bg-main {
-  background-color: color.$main-background
+  background-color: colors.$main-background
 }
 .util-color-bg-sub {
-  background-color: color.$sub-background
+  background-color: colors.$sub-background
 }
 .util-color-bg-danger {
-  background-color: color.$danger
+  background-color: colors.$danger
 }
 .util-color-border {
-  border: color.$input-border
+  border: colors.$input-border
 }
 .util-color-border-primary {
-  border: color.$primary
+  border: colors.$primary
 }
 .util-color-border-danger {
-  border: color.$danger
+  border: colors.$danger
 }
 
 

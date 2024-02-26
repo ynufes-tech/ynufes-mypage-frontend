@@ -1,7 +1,7 @@
 /*
 htmlタグなどに初期スタイルを設定するためのscss
 */
-@use './variables' as color;
+@use './colors' as colors;
 @use './utility';
 html {
   font-size: 100%;
@@ -12,6 +12,6 @@ html {
   @extend .font-family-main;
 }
 a {
-  color: color.$text-link;
+  color: colors.$text-link;
   text-decoration: none;
 }
