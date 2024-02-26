@@ -9,14 +9,10 @@ export const useLogin = () => {
     const client = useApiClient()
     try {
       const resp = await client.get('/api/v1/user/info')
-      const json = JSON.parse(resp as string)
-      const user = {
-        name_first: json.name_first,
-        name_last: json.name_last,
-        profile_picture: json.profile_icon_url,
-        type: json.type,
-        status: json.status
-      } as User
+      if (resp.error) {
+        return false
+      }
+      const user = resp.data as User
       authStore.setUser(user)
     } catch (e) {
       console.error(e)
