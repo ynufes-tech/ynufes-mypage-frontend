@@ -21,11 +21,18 @@ const goAuthURL = async () => {
 }
 </script>
 <template>
-  <div class="d-flex m-0">
-    <button class="login-button d-flex" @click="goAuthURL()">
-      <img src="/line_btn_base.png" class="login-button__icon" />
-      <span>LINEでログイン</span>
-    </button>
+  <div class="page-login">
+    <img src="~/assets/MyPageLogoBig.svg" />
+    <img src="~/assets/LoginImage.svg" />
+    <div class="login-button d-flex" @click="goAuthURL()">
+      <img src="~/assets/LINE-login-button.svg" />
+    </div>
   </div>
 </template>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.page-login {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f6f4;
+}
+</style>
