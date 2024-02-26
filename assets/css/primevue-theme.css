@@ -390,7 +390,8 @@
   .p-connected-overlay {
     opacity: 0;
     transform: scaleY(0.8);
-    transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+    transition:
+      transform 0.12s cubic-bezier(0, 0, 0.2, 1),
       opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
   }
 
@@ -416,7 +417,8 @@
   }
 
   .p-connected-overlay-enter-active {
-    transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+    transition:
+      transform 0.12s cubic-bezier(0, 0, 0.2, 1),
       opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
   }
 
@@ -691,7 +693,10 @@
     border: 0 none;
     color: #808778;
     background: transparent;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-autocomplete-panel .p-autocomplete-items .p-autocomplete-item:first-child {
@@ -918,7 +923,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-datepicker .p-datepicker-header .p-datepicker-prev:enabled:hover,
@@ -939,7 +947,10 @@
   .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year,
   .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month {
     color: #808778;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     font-weight: 600;
     padding: 0.5rem;
   }
@@ -974,7 +985,10 @@
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border: 1px solid transparent;
     outline-color: transparent;
   }
@@ -1014,7 +1028,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-datepicker .p-timepicker button:enabled:hover {
@@ -1044,7 +1061,10 @@
   }
   .p-datepicker .p-monthpicker .p-monthpicker-month {
     padding: 0.5rem;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 3px;
   }
   .p-datepicker .p-monthpicker .p-monthpicker-month.p-highlight {
@@ -1056,7 +1076,10 @@
   }
   .p-datepicker .p-yearpicker .p-yearpicker-year {
     padding: 0.5rem;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 3px;
   }
   .p-datepicker .p-yearpicker .p-yearpicker-year.p-highlight {
@@ -1229,7 +1252,10 @@
   .p-cascadeselect {
     background: #ffffff;
     border: 1px solid #ced4da;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     border-radius: 3px;
     outline-color: transparent;
@@ -1290,7 +1316,10 @@
     border: 0 none;
     color: #808778;
     background: transparent;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-cascadeselect-panel
@@ -1376,7 +1405,10 @@
     height: 20px;
     color: #808778;
     border-radius: 3px;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     outline-color: transparent;
   }
@@ -1668,7 +1700,10 @@
   .p-dropdown {
     background: #ffffff;
     border: 1px solid #ced4da;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     border-radius: 3px;
     outline-color: transparent;
@@ -1757,7 +1792,10 @@
     border: 0 none;
     color: #808778;
     background: transparent;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-dropdown-panel .p-dropdown-items .p-dropdown-item:first-child {
@@ -2115,7 +2153,10 @@
   }
   .p-inputswitch .p-inputswitch-slider {
     background: #ced4da;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     border-radius: 30px;
     outline-color: transparent;
@@ -2171,7 +2212,10 @@
     background: #ffffff;
     padding: 0.5rem 0.5rem;
     border: 1px solid #ced4da;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     appearance: none;
     border-radius: 3px;
@@ -2337,7 +2381,10 @@
     color: #808778;
     border: 1px solid #ced4da;
     border-radius: 3px;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     outline-color: transparent;
   }
@@ -2366,7 +2413,10 @@
     padding: 0.5rem 1rem;
     border: 0 none;
     color: #808778;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-listbox .p-listbox-list .p-listbox-item:first-child {
@@ -2528,7 +2578,10 @@
   .p-multiselect {
     background: #ffffff;
     border: 1px solid #ced4da;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     border-radius: 3px;
     outline-color: transparent;
@@ -2553,7 +2606,10 @@
   }
   .p-multiselect .p-multiselect-label {
     padding: 0.5rem 0.5rem;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
   }
   .p-multiselect .p-multiselect-label.p-placeholder {
@@ -2626,7 +2682,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-multiselect-panel
@@ -2652,7 +2711,10 @@
     border: 0 none;
     color: #808778;
     background: transparent;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-multiselect-panel .p-multiselect-items .p-multiselect-item:first-child {
@@ -2801,7 +2863,10 @@
     height: 20px;
     color: #808778;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     outline-color: transparent;
   }
@@ -2900,7 +2965,10 @@
   }
   .p-rating .p-rating-item .p-rating-icon {
     color: #808778;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     font-size: 1.143rem;
   }
@@ -2934,7 +3002,10 @@
     background: #ffffff;
     border: 1px solid #ced4da;
     color: #808778;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
   }
   .p-selectbutton .p-button .p-button-icon-left,
@@ -3039,7 +3110,10 @@
     background: #ffffff;
     border: 2px solid #7ed321;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     outline-color: transparent;
   }
@@ -3120,7 +3194,10 @@
   .p-treeselect {
     background: #ffffff;
     border: 1px solid #ced4da;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     border-radius: 3px;
     outline-color: transparent;
@@ -3145,7 +3222,10 @@
   }
   .p-treeselect .p-treeselect-label {
     padding: 0.5rem 0.5rem;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
   }
   .p-treeselect .p-treeselect-label.p-placeholder {
@@ -3233,7 +3313,10 @@
     background: #ffffff;
     border: 1px solid #ced4da;
     color: #808778;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     outline-color: transparent;
   }
@@ -3370,7 +3453,10 @@
     border: 1px solid #7ed321;
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     border-radius: 3px;
     outline-color: transparent;
@@ -3467,8 +3553,10 @@
     background-color: #fff;
   }
   .p-button.p-button-raised {
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow:
+      0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   }
   .p-button.p-button-rounded {
     border-radius: 2rem;
@@ -4013,7 +4101,9 @@
   .p-speeddial-item {
     transform: scale(0);
     opacity: 0;
-    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, opacity 0.8s;
+    transition:
+      transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      opacity 0.8s;
     will-change: transform;
   }
 
@@ -4094,7 +4184,10 @@
     background: #ffffff;
     color: #212121;
     outline-color: transparent;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
   }
   .p-speeddial-action:hover {
     background: #f5f5f5;
@@ -4192,8 +4285,10 @@
     border-radius: 2rem;
   }
   .p-splitbutton.p-button-raised {
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow:
+      0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   }
 
   .p-carousel {
@@ -4274,7 +4369,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
     margin: 0.5rem;
   }
@@ -4301,7 +4399,10 @@
     background-color: #e9ecef;
     width: 2rem;
     height: 0.5rem;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-carousel .p-carousel-indicators .p-carousel-indicator button:hover {
@@ -4586,7 +4687,10 @@
     font-weight: 600;
     color: #808778;
     background: #f8f9fa;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
   }
   .p-datatable .p-datatable-tfoot > tr > td {
     text-align: left;
@@ -4640,7 +4744,10 @@
   .p-datatable .p-datatable-tbody > tr {
     background: #ffffff;
     color: #808778;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
   }
   .p-datatable .p-datatable-tbody > tr > td {
     text-align: left;
@@ -4658,7 +4765,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
@@ -4919,7 +5029,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-column-filter-menu-button:hover {
@@ -4950,7 +5063,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-column-filter-clear-button:hover {
@@ -4983,7 +5099,10 @@
     border: 0 none;
     color: #808778;
     background: transparent;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-column-filter-overlay
@@ -5103,7 +5222,10 @@
     background: #ffffff;
     border: 1px solid #dee2e6;
     border-radius: 3px;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     outline-color: transparent;
   }
@@ -5132,7 +5254,10 @@
     border: 0 none;
     color: #808778;
     background: transparent;
-    transition: transform 0.2s, background-color 0.2s, border-color 0.2s,
+    transition:
+      transform 0.2s,
+      background-color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
   }
   .p-orderlist .p-orderlist-list .p-orderlist-item:first-child {
@@ -5332,7 +5457,10 @@
     min-width: 2.357rem;
     height: 2.357rem;
     margin: 0.143rem;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 3px;
   }
   .p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover,
@@ -5382,7 +5510,10 @@
     min-width: 2.357rem;
     height: 2.357rem;
     margin: 0.143rem;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 3px;
   }
   .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
@@ -5440,7 +5571,10 @@
     background: #ffffff;
     border: 1px solid #dee2e6;
     border-radius: 3px;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     outline-color: transparent;
   }
@@ -5469,7 +5603,10 @@
     border: 0 none;
     color: #808778;
     background: transparent;
-    transition: transform 0.2s, background-color 0.2s, border-color 0.2s,
+    transition:
+      transform 0.2s,
+      background-color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
   }
   .p-picklist .p-picklist-list .p-picklist-item:first-child {
@@ -5755,7 +5892,10 @@
   }
   .p-tree .p-tree-container .p-treenode .p-treenode-content {
     border-radius: 3px;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     padding: 0.5rem;
   }
   .p-tree .p-tree-container .p-treenode .p-treenode-content .p-tree-toggler {
@@ -5766,7 +5906,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-tree
@@ -6067,7 +6210,10 @@
     font-weight: 600;
     color: #808778;
     background: #f8f9fa;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
   }
   .p-treetable .p-treetable-tfoot > tr > td {
     text-align: left;
@@ -6113,7 +6259,10 @@
   .p-treetable .p-treetable-tbody > tr {
     background: #ffffff;
     color: #808778;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
   }
   .p-treetable .p-treetable-tbody > tr > td {
     text-align: left;
@@ -6128,7 +6277,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
     margin-right: 0.5rem;
   }
@@ -6270,7 +6422,10 @@
     background: #f8f9fa;
     font-weight: 600;
     border-radius: 3px;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-accordion
@@ -6368,8 +6523,10 @@
   .p-card {
     background: #ffffff;
     color: #808778;
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    box-shadow:
+      0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     border-radius: 3px;
   }
   .p-card .p-card-body {
@@ -6427,13 +6584,19 @@
   }
   .p-fieldset.p-fieldset-toggleable .p-fieldset-legend {
     padding: 0;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
   }
   .p-fieldset.p-fieldset-toggleable .p-fieldset-legend a {
     padding: 1rem;
     color: #808778;
     border-radius: 3px;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-fieldset.p-fieldset-toggleable .p-fieldset-legend a .p-fieldset-toggler {
@@ -6574,7 +6737,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-panel .p-panel-header .p-panel-header-icon:enabled:hover {
@@ -6670,7 +6836,10 @@
   .p-scrollpanel .p-scrollpanel-bar {
     background: #f8f9fa;
     border: 0 none;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     outline-color: transparent;
   }
@@ -6747,12 +6916,18 @@
     color: #808778;
   }
   .p-splitter .p-splitter-gutter {
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     background: #f8f9fa;
   }
   .p-splitter .p-splitter-gutter .p-splitter-gutter-handle {
     background: #dee2e6;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     outline-color: transparent;
   }
@@ -6853,7 +7028,10 @@
     font-weight: 600;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     margin: 0 0 -2px 0;
     outline-color: transparent;
   }
@@ -6882,8 +7060,10 @@
     background: #ffffff;
     color: #7ed321;
     width: 2.357rem;
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow:
+      0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     border-radius: 0;
     outline-color: transparent;
   }
@@ -6955,7 +7135,8 @@
   }
 
   .p-confirm-popup-enter-active {
-    transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+    transition:
+      transform 0.12s cubic-bezier(0, 0, 0.2, 1),
       opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
   }
 
@@ -7212,7 +7393,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
     margin-right: 0.5rem;
   }
@@ -7284,7 +7468,8 @@
   }
 
   .p-overlaypanel-enter-active {
-    transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+    transition:
+      transform 0.12s cubic-bezier(0, 0, 0.2, 1),
       opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
   }
 
@@ -7342,7 +7527,10 @@
     color: #fff;
     width: 2rem;
     height: 2rem;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     border-radius: 50%;
     position: absolute;
     top: -1rem;
@@ -7543,7 +7731,10 @@
     border: 0 none;
     background: transparent;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-sidebar .p-sidebar-header .p-sidebar-close:enabled:hover,
@@ -7787,7 +7978,10 @@
     padding: 1rem;
   }
   .p-breadcrumb .p-breadcrumb-list li .p-menuitem-link {
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 3px;
     outline-color: transparent;
   }
@@ -7886,7 +8080,10 @@
   }
   .p-contextmenu .p-menuitem > .p-menuitem-content {
     color: #808778;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-contextmenu .p-menuitem > .p-menuitem-content .p-menuitem-link {
@@ -8377,7 +8574,10 @@
   }
   .p-megamenu .p-menuitem > .p-menuitem-content {
     color: #808778;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-megamenu .p-menuitem > .p-menuitem-content .p-menuitem-link {
@@ -8516,7 +8716,10 @@
     > .p-menuitem
     > .p-menuitem-content {
     color: #808778;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 3px;
   }
   .p-megamenu.p-megamenu-horizontal
@@ -8591,7 +8794,10 @@
     height: 2rem;
     color: #a0a59a;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-megamenu.p-megamenu-mobile .p-megamenu-button:hover {
@@ -8696,7 +8902,10 @@
   }
   .p-menu .p-menuitem > .p-menuitem-content {
     color: #808778;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-menu .p-menuitem > .p-menuitem-content .p-menuitem-link {
@@ -8932,7 +9141,10 @@
   }
   .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-content {
     color: #808778;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 3px;
   }
   .p-menubar
@@ -9009,7 +9221,10 @@
   }
   .p-menubar .p-menuitem > .p-menuitem-content {
     color: #808778;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-menubar .p-menuitem > .p-menuitem-content .p-menuitem-link {
@@ -9135,7 +9350,10 @@
     height: 2rem;
     color: #a0a59a;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-menubar.p-menubar-mobile .p-menubar-button:hover {
@@ -9295,7 +9513,10 @@
     color: #808778;
     background: #f8f9fa;
     border-radius: 3px;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-panelmenu
@@ -9376,7 +9597,10 @@
   }
   .p-panelmenu .p-panelmenu-content .p-menuitem > .p-menuitem-content {
     color: #808778;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-panelmenu
@@ -9625,7 +9849,10 @@
 
   .p-steps .p-steps-item .p-menuitem-link {
     background: transparent;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 3px;
     background: #ffffff;
     outline-color: transparent;
@@ -9727,7 +9954,10 @@
     font-weight: 600;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     margin: 0 0 -2px 0;
     outline-color: transparent;
   }
@@ -9839,7 +10069,10 @@
   }
   .p-tieredmenu .p-menuitem > .p-menuitem-content {
     color: #808778;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
     border-radius: 0;
   }
   .p-tieredmenu .p-menuitem > .p-menuitem-content .p-menuitem-link {
@@ -10071,7 +10304,9 @@
 
   .p-message-leave-active {
     overflow: hidden;
-    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), opacity 0.3s,
+    transition:
+      max-height 0.3s cubic-bezier(0, 1, 0, 1),
+      opacity 0.3s,
       margin 0.15s;
   }
 
@@ -10091,7 +10326,10 @@
     height: 2rem;
     border-radius: 50%;
     background: transparent;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-message .p-message-close:hover {
@@ -10227,14 +10465,22 @@
   }
 
   .p-toast-message-enter-active {
-    -webkit-transition: transform 0.3s, opacity 0.3s;
-    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition:
+      transform 0.3s,
+      opacity 0.3s;
+    transition:
+      transform 0.3s,
+      opacity 0.3s;
   }
 
   .p-toast-message-leave-active {
-    -webkit-transition: max-height 0.45s cubic-bezier(0, 1, 0, 1), opacity 0.3s,
+    -webkit-transition:
+      max-height 0.45s cubic-bezier(0, 1, 0, 1),
+      opacity 0.3s,
       margin-bottom 0.3s;
-    transition: max-height 0.45s cubic-bezier(0, 1, 0, 1), opacity 0.3s,
+    transition:
+      max-height 0.45s cubic-bezier(0, 1, 0, 1),
+      opacity 0.3s,
       margin-bottom 0.3s;
   }
 
@@ -10274,7 +10520,10 @@
     height: 2rem;
     border-radius: 50%;
     background: transparent;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-toast .p-toast-message .p-toast-icon-close:hover {
@@ -10624,7 +10873,10 @@
     color: #ebedef;
     width: 4rem;
     height: 4rem;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     border-radius: 50%;
   }
   .p-galleria .p-galleria-close .p-galleria-close-icon {
@@ -10643,7 +10895,10 @@
     color: #aeb6bf;
     width: 4rem;
     height: 4rem;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     border-radius: 3px;
     margin: 0.5rem 0;
   }
@@ -10671,7 +10926,10 @@
     background-color: #e9ecef;
     width: 1rem;
     height: 1rem;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     border-radius: 50%;
   }
   .p-galleria .p-galleria-indicators .p-galleria-indicator button:hover {
@@ -10722,7 +10980,10 @@
     color: #aeb6bf;
     width: 2rem;
     height: 2rem;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     border-radius: 50%;
   }
   .p-galleria .p-galleria-thumbnail-container .p-galleria-thumbnail-prev:hover,
@@ -10828,7 +11089,10 @@
   .p-image-preview-indicator {
     background-color: transparent;
     color: #f8f9fa;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
   }
   .p-image-preview-indicator .p-icon {
     width: 1.5rem;
@@ -10849,7 +11113,10 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     margin-right: 0.5rem;
   }
   .p-image-action.p-link:last-child {
@@ -11067,7 +11334,10 @@
   .p-chip .p-chip-remove-icon {
     margin-left: 0.5rem;
     border-radius: 3px;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     outline-color: transparent;
   }
   .p-chip .p-chip-remove-icon:focus-visible {
@@ -11100,7 +11370,10 @@
   .p-inplace .p-inplace-display {
     padding: 0.5rem 0.5rem;
     border-radius: 3px;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s,
       box-shadow 0.2s;
     outline-color: transparent;
   }
@@ -11372,7 +11645,8 @@
     stroke-dasharray: 89, 200;
     stroke-dashoffset: 0;
     stroke: #ffffff;
-    animation: p-progress-spinner-dash 1.5s ease-in-out infinite,
+    animation:
+      p-progress-spinner-dash 1.5s ease-in-out infinite,
       p-progress-spinner-color 6s ease-in-out infinite;
     stroke-linecap: round;
   }
@@ -11478,7 +11752,10 @@
     height: 3rem;
     border-radius: 50%;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
   }
   .p-scrolltop.p-link {
     background: rgba(0, 0, 0, 0.7);

@@ -1,11 +1,17 @@
 /*
 htmlタグなどに初期スタイルを設定するためのscss
 */
+@use './colors' as colors;
 @use './utility';
 html {
   font-size: 100%;
+  color: colors.$text;
   letter-spacing: 0.8px;
   line-height: 1.15;
   overflow: auto;
   @extend .font-family-main;
+}
+a {
+  color: colors.$text-link;
+  text-decoration: none;
 }
