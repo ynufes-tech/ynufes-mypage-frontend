@@ -3,11 +3,11 @@ import { useAuthStore } from '~/stores/auth'
 
 // get token from query
 const route = useRoute()
-const token = route.query.token as string
+const token = route.query.code as string
 
 // set token to store
-const authStore = useAuthStore()
-authStore.setToken(token)
+const ul = useLogin()
+await ul.authWithCode(token)
 
 // redirect to home
 useRouter().push('/')
