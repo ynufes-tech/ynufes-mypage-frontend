@@ -16,14 +16,12 @@ export const useUserInfo = () => {
   const userInfo: Ref<UserInfo | null> = useState('userInfo', () => null)
 
   const updateUserInfo = async (ui: UserInfo): Promise<boolean> => {
-    try {
-      console.log(ui)
-      const resp = await client.post('api/v1/user/info', ui)
-      return !resp.error;
-    } catch (err) {
-      console.error(err)
+    const resp = await client.post('/api/v1/user/info', ui)
+    if (resp.error) {
+      console.error(resp.error)
       return false
     }
+    return !resp.error
   }
 
   return { userInfo, updateUserInfo }
