@@ -25,8 +25,8 @@ const goAuthURL = async () => {
     <div class="images">
       <img src="~/assets/MyPageLogoBig.svg" class="mypage-logo" />
       <img src="~/assets/LoginImage.svg" class="login-image" />
-      <div class="login-button d-flex" @click="goAuthURL()">
-        <img src="~/assets/LINE-login-button.svg" />
+      <div class="login-button d-flex">
+        <img src="~/assets/LINE-login-button.svg" @click="goAuthURL()" />
       </div>
     </div>
   </div>
@@ -43,17 +43,37 @@ const goAuthURL = async () => {
 }
 .images {
   width: 70vw;
-  height: 70vh;
+  height: 60svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding-bottom: 30%;
 }
 .mypage-logo {
-  width: 40vw;
+  aspect-ratio: 4;
+  width: 60%;
+  min-width: 150px;
+  max-width: 256px;
 }
 .login-image {
-  width: 70vw;
+  aspect-ratio: 1;
+  width: 100%;
+  min-width: 150px;
+  max-width: 500px;
+}
+.login-button {
+  width: 100%;
+  > img {
+    aspect-ratio: 3;
+    width: 70%;
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .images {
+    height: 90vh;
+  }
 }
 </style>
