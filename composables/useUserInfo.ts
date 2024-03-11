@@ -18,8 +18,8 @@ export const useUserInfo = () => {
   const updateUserInfo = async (ui: UserInfo): Promise<boolean> => {
     try {
       console.log(ui)
-      const resp = await client.post('api/v1/user/info', ui)
-      return !resp.error;
+      const resp = await client.post('/api/v1/user/info', ui)
+      return !resp.error
     } catch (err) {
       console.error(err)
       return false
