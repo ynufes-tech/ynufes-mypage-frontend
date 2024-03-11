@@ -35,7 +35,7 @@ export const useAuthStore = defineStore('auth', {
 export class User {
   name_first = ''
   name_last = ''
-  profile_picture = ''
+  profile_icon_url = ''
   type = 0
   status = 0
 }

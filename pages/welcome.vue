@@ -24,10 +24,19 @@ const submit = async () => {
     name_last: lastName.value,
     name_last_kana: lastNameKana.value,
     email: email.value,
-    gender: gender.value,
-    student_id: studentID.value
+    gender: Number(gender.value),
+    student_id: studentID.value as string
   }
-  await useUserInfo().updateUserInfo(userInfo)
+  await useUserInfo()
+    .updateUserInfo(userInfo)
+    .then(() => {
+      console.log('success')
+      navigateTo('/')
+    })
+    .catch((e) => {
+      console.log(e)
+      navigateTo('/welcome')
+    })
 
   console.log(userInfo)
 }
@@ -37,7 +46,7 @@ const user = await useLogin().getCurrentUser()
 <template>
   <main class="surface-ground w-screen min-h-screen p-3">
     <div class="flex justify-content-center mb-4">
-      <Avatar :image="user?.profile_picture" size="xlarge" shape="circle" />
+      <Avatar :image="user?.profile_icon_url" size="xlarge" shape="circle" />
     </div>
     <Card
       class="bg-white shadow-none w-98 m-auto mt-2 border-round-lg"
@@ -135,7 +144,7 @@ const user = await useLogin().getCurrentUser()
           >のリンクからご確認ください。
         </p>
         <div class="flex align-items-center mt-3">
-          <Checkbox v-model="checked" class="" binary="true" />
+          <Checkbox v-model="checked" class="" binary />
           <label class="text-sm util-color-text-danger underline">
             上記の個人情報の取扱いについて同意します。
           </label>
