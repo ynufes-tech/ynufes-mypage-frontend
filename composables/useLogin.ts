@@ -4,6 +4,26 @@ import { useAuthStore, User } from '~/stores/auth'
 
 export const useLogin = () => {
   const authStore = useAuthStore()
+  const authWithCode = async (code: string): Promise<boolean> => {
+    try {
+      const token: any = await $fetch('http://localhost:1306/api/v1/auth/token', {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        },
+        method: 'POST',
+        body: JSON.stringify({ 'code': code })
+      })
+      if (!token.token) {
+        return false
+      }
+      const authStore = useAuthStore()
+      authStore.setToken(token.token)
+    } catch (e) {
+      console.error(e)
+      return false
+    }
+    return true
+  }
 
   const trySignIn = async () => {
     const client = useApiClient()
@@ -37,5 +57,5 @@ export const useLogin = () => {
     authStore.clearToken()
     authStore.clearUser()
   }
-  return { getCurrentUser, signOut, trySignIn }
+  return { getCurrentUser, signOut, trySignIn, authWithCode }
 }
