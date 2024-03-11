@@ -19,7 +19,6 @@ export const useUserInfo = () => {
     const resp = await client.post('/api/v1/user/info', ui)
     if (resp.error) {
       console.error(resp.error)
-      return false
     }
     return !resp.error
   }
