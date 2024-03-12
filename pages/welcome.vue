@@ -44,59 +44,56 @@ const submit = async () => {
 const user = await useLogin().getCurrentUser()
 </script>
 <template>
-  <main class="surface-ground w-screen min-h-screen p-3">
-    <div class="flex justify-content-center mb-4">
-      <Avatar :image="user?.profile_icon_url" size="xlarge" shape="circle" />
+  <main class="surface-ground w-screen min-h-screen p-2">
+    <div class="flex justify-content-center mb-2">
+      <Avatar :image="user?.profile_icon_url" size="large" shape="circle" />
     </div>
     <Card
-      class="bg-white shadow-none w-98 m-auto mt-2 border-round-lg"
-      style="max-width: 1024px"
+      class="bg-white shadow-none w-99 m-auto mt-2 p-0 border-round-lg"
+      style="max-width: 756px"
     >
       <template #content>
-        <p class="text-xl font-bold mb-2">お名前</p>
+        <p class="text-base font-bold mb-2">お名前</p>
         <InputGroup class="flex gap-3">
-          <FloatLabel class="min-w-20rem">
-            <InputText
-              v-model="firstName"
-              type="text"
-              class="border-round-lg"
-            />
-            <label for="username">姓</label>
-          </FloatLabel>
-          <FloatLabel class="min-w-20rem">
-            <InputText v-model="lastName" type="text" class="border-round-lg" />
-            <label for="username">名</label>
-          </FloatLabel>
+          <InputText
+            v-model="lastName"
+            placeholder="姓"
+            type="text"
+            class="border-round-lg h-2rem util-color-placeholder"
+          />
+          <InputText
+            v-model="firstName"
+            placeholder="名"
+            type="text"
+            class="border-round-lg h-2rem util-color-placeholder"
+          />
         </InputGroup>
-        <p class="text-xl font-bold mb-2 mt-3">お名前(カタカナ)</p>
+        <p class="text-base font-bold mb-2 mt-4">お名前(カタカナ)</p>
         <InputGroup class="flex gap-3">
-          <FloatLabel class="min-w-20rem">
-            <InputText
-              v-model="firstNameKana"
-              type="text"
-              class="border-round-lg"
-            />
-            <label for="username">セイ</label>
-          </FloatLabel>
-          <FloatLabel class="min-w-20rem">
-            <InputText
-              v-model="lastNameKana"
-              type="text"
-              class="border-round-lg"
-            />
-            <label for="username">メイ</label>
-          </FloatLabel>
+          <InputText
+            v-model="lastNameKana"
+            placeholder="セイ"
+            type="text"
+            class="border-round-lg h-2rem util-color-placeholder"
+          />
+          <InputText
+            v-model="firstNameKana"
+            placeholder="メイ"
+            type="text"
+            class="border-round-lg h-2rem util-color-placeholder"
+          />
         </InputGroup>
-        <p class="text-xl font-bold mb-2 mt-3">メールアドレス</p>
+        <p class="text-base font-bold mb-2 mt-4">メールアドレス</p>
         <div class="">
           <InputText
             v-model="email"
+            placeholder="example@example.com"
             type="email"
-            class="border-round-lg w-full"
+            class="border-round-lg w-full h-2rem util-color-placeholder"
           />
         </div>
-        <p class="text-xl font-bold mb-2 mt-3">性別</p>
-        <InputGroup class="mt-4">
+        <p class="text-base font-bold mb-2 mt-4">性別</p>
+        <InputGroup class="">
           <div>
             <RadioButton
               v-model="gender"
@@ -117,45 +114,47 @@ const user = await useLogin().getCurrentUser()
           </div>
         </InputGroup>
 
-        <p class="text-xl font-bold mb-2 mt-3">学籍番号</p>
+        <p class="text-base font-bold mb-2 mt-4">学籍番号</p>
         <div class="">
           <InputText
             v-model="studentID"
+            placeholder="0000000"
             inputId="student-id"
             :useGrouping="false"
             type="number"
-            class="border-round-lg w-full"
+            class="border-round-lg w-full h-2rem util-color-placeholder"
           />
         </div>
       </template>
     </Card>
-    <Card
-      class="util-color-bg-main shadow-none w-98 m-auto mt-1 border-round-lg"
-      style="max-width: 1024px"
+    <div
+      class="util-color-bg-main shadow-none w-100 m-auto mt-1 border-round-lg"
+      style="max-width: 756px"
     >
-      <template #content>
-        <p>
-          ※個人情報の詳しい取扱いに関しましては、<a
-            href="https://ynu-fes.notion.site/7ea030037f6e4226b0f3ca7476e98453?pvs=4"
-            target="_blank"
-            noreferrer
-            noopener
-            >こちら</a
-          >のリンクからご確認ください。
-        </p>
-        <div class="flex align-items-center mt-3">
-          <Checkbox v-model="checked" class="" binary />
-          <label class="text-sm util-color-text-danger underline">
-            上記の個人情報の取扱いについて同意します。
-          </label>
-        </div>
-      </template>
-    </Card>
+      <p class="mt-2">
+        ※個人情報の取扱いに関しましては、<a
+          href="https://ynu-fes.notion.site/7ea030037f6e4226b0f3ca7476e98453?pvs=4"
+          class="inline-block"
+          target="_blank"
+          noreferrer
+          noopener
+          >こちら</a
+        >のリンクからご確認ください。
+      </p>
+      <div class="flex align-items-center mx-auto w-fit mt-3 mb-2">
+        <Checkbox v-model="checked" class="" binary />
+        <label
+          class="ml-2 text-sm util-color-text-danger underline -translate-y-50"
+        >
+          上記の個人情報の取扱いについて同意します。
+        </label>
+      </div>
+    </div>
 
     <div class="flex justify-center">
       <Button
         label="登録"
-        class="px-4 m-auto mt-3 border-round-lg"
+        class="px-6 m-auto mt-3 border-round-lg"
         @click="submit"
       />
     </div>
