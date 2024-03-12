@@ -90,10 +90,7 @@ classベースでデザインするためによく使うstyleをクラス化す�
 単一プロパティを表す責務を負うcss class
 */
 .font-family-main {
-  font-family: 'Klee One', 'Noto Color Emoji', sans-serif !important;
-}
-.font-family-accent {
-  font-family: 'Zen Maru Gothic' !important;
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 $transition: ease, ease-out, ease-in, ease-in-out;

@@ -5,6 +5,7 @@ htmlタグなどに初期スタイルを設定するためのscss
 @use './utility';
 html {
   font-size: 100%;
+  font-family: 'Zen Maru Gothic', sans-serif;
   color: colors.$text;
   letter-spacing: 0.8px;
   line-height: 1.15;
