@@ -25,7 +25,18 @@ export default defineNuxtConfig({
     shim: false,
     strict: true
   },
-  modules: ['nuxt-primevue', '@pinia/nuxt'],
+  modules: [
+    'nuxt-primevue',
+    '@pinia/nuxt',
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          'Zen Maru Gothic': [400, 700]
+        }
+      }
+    ]
+  ],
   css: [
     '@/assets/css/reset.css',
     '@/assets/css/primevue-theme.css',
@@ -42,7 +53,7 @@ export default defineNuxtConfig({
       include: '*'
     },
     // theme: 'aura-light-green',
-    cssLayerOrder: ['reset, primevue, primeicons']
+    cssLayerOrder: 'reset, primevue, primeicons'
   },
   build: {},
   vite: {
