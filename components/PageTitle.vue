@@ -16,7 +16,7 @@ const props = defineProps({
       <i class="pi pi-angle-left text-xl mr-1 font-bold inline"></i>
     </a>
     <i
-      v-if="!props.backLink"
+      v-else
       class="pi pi-angle-right text-xl mr-1 font-bold inline"
     ></i>
     <h1 class="text-xl font-bold inline vertical-align-text-top">
