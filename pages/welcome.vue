@@ -45,14 +45,19 @@ const user = await useLogin().getCurrentUser()
 </script>
 <template>
   <main class="surface-ground w-screen min-h-screen p-2">
-    <div class="flex justify-content-center mb-2">
-      <Avatar :image="user?.profile_icon_url" size="large" shape="circle" />
-    </div>
+    <PageTitle
+      pageTitle="初期情報登録画面"
+      style="max-width: 756px"
+      class="mx-auto my-4"
+    />
     <Card
       class="bg-white shadow-none w-99 m-auto mt-2 p-0 border-round-lg"
       style="max-width: 756px"
     >
       <template #content>
+        <div class="flex justify-content-center mb-1">
+          <Avatar :image="user?.profile_icon_url" size="large" shape="circle" />
+        </div>
         <p class="text-base font-bold mb-2">お名前</p>
         <InputGroup class="flex gap-3">
           <InputText
@@ -131,7 +136,7 @@ const user = await useLogin().getCurrentUser()
       class="util-color-bg-main shadow-none w-100 m-auto mt-1 border-round-lg"
       style="max-width: 756px"
     >
-      <p class="mt-2">
+      <p class="mt-2 text-sm">
         ※個人情報の取扱いに関しましては、<a
           href="https://ynu-fes.notion.site/7ea030037f6e4226b0f3ca7476e98453?pvs=4"
           class="inline-block"
@@ -141,7 +146,7 @@ const user = await useLogin().getCurrentUser()
           >こちら</a
         >のリンクからご確認ください。
       </p>
-      <div class="flex align-items-center mx-auto w-fit mt-3 mb-2">
+      <div class="flex align-items-center mx-auto w-fit mt-2">
         <Checkbox v-model="checked" class="" binary />
         <label
           class="ml-2 text-sm util-color-text-danger underline -translate-y-50"
@@ -154,7 +159,7 @@ const user = await useLogin().getCurrentUser()
     <div class="flex justify-center">
       <Button
         label="登録"
-        class="px-6 m-auto mt-3 border-round-lg"
+        class="px-6 m-auto mt-4 border-round-lg"
         @click="submit"
       />
     </div>
