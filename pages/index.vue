@@ -9,9 +9,7 @@ onBeforeMount(() => {
 })
 </script>
 <template>
-  <main class="main-content-wrapper">
-    <PageTitle pageTitle="トップページ" backLink="/welcome" />
-  </main>
+  <main class="main-content-wrapper"></main>
 </template>
 <style>
 .main-content-wrapper {
