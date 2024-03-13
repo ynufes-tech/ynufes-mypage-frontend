@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AppSidebar from './AppSidebar.vue'
+import BottomAppBar from './BottomAppBar.vue'
 
 useHead({
   title: 'Top',
@@ -7,11 +8,12 @@ useHead({
 })
 </script>
 <template>
-  <div id="dashboard-root-frame">
+  <div id="dashboard-root-frame" class="util-color-bg-main">
     <AppSidebar />
     <div id="dashboard-root-content">
       <slot />
     </div>
+    <BottomAppBar />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -19,7 +21,7 @@ useHead({
   display: flex;
   flex-direction: row;
   width: 100vw;
-  height: 100svh;
+  min-height: 100svh;
 }
 
 #dashboard-root-content {

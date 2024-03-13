@@ -7,7 +7,8 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: '' },
         { name: 'viewport', content: 'width=device-width' },
-        { name: 'format-detection', content: 'telephone=no' }
+        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'theme-color', content: '#f5f6f4' }
       ],
 
       link: [
