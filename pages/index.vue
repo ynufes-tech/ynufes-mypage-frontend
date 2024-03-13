@@ -7,21 +7,9 @@ const showOrgs = ref(false)
 onBeforeMount(() => {
   console.log(document.cookie)
 })
-
-const userName = ref('MyPageユーザ') // 一時的な処置
-// const greetings = ['こんにちは!', 'Hello!', 'やっほ〜', 'よくぞ参った！']
-// function randomGreetings() {
-//   const length = greetings.length
-//   const randomIndex = Math.floor(Math.random() * length)
-//   return greetings[randomIndex]
-// }
 </script>
 <template>
-  <main class="main-content-wrapper">
-    <!-- <h1>{{ randomGreetings() }} {{ userName }}さん</h1> -->
-    <div class="count-down"></div>
-    <CardOrgLink />
-  </main>
+  <main class="main-content-wrapper"></main>
 </template>
 <style>
 .main-content-wrapper {

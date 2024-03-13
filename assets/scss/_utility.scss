@@ -3,39 +3,44 @@
 classベースでデザインするためによく使うstyleをクラス化するscss
 */
 .util-color-text {
-  color: colors.$text
+  color: colors.$text;
 }
 .util-color-text-primary {
-  color: colors.$primary
+  color: colors.$primary;
 }
 .util-color-text-link {
-  color: colors.$text-link
+  color: colors.$text-link;
 }
 .util-color-text-danger {
-  color: colors.$danger
+  color: colors.$danger;
 }
 .util-color-bg-primary {
-  background-color: colors.$primary
+  background-color: colors.$primary;
 }
 .util-color-bg-main {
-  background-color: colors.$main-background
+  background-color: colors.$main-background;
 }
 .util-color-bg-sub {
-  background-color: colors.$sub-background
+  background-color: colors.$sub-background;
 }
 .util-color-bg-danger {
-  background-color: colors.$danger
+  background-color: colors.$danger;
 }
 .util-color-border {
-  border: colors.$input-border
+  border: colors.$input-border;
 }
 .util-color-border-primary {
-  border: colors.$primary
+  border: colors.$primary;
 }
 .util-color-border-danger {
-  border: colors.$danger
+  border: colors.$danger;
 }
-
+.util-color-placeholder {
+  &::placeholder {
+    color: colors.$text;
+    opacity: 0.5;
+  }
+}
 
 /*
 ::beforeや::afterに関するstyle
@@ -85,10 +90,7 @@ classベースでデザインするためによく使うstyleをクラス化す�
 単一プロパティを表す責務を負うcss class
 */
 .font-family-main {
-  font-family: 'Klee One', 'Noto Color Emoji', sans-serif !important;
-}
-.font-family-accent {
-  font-family: 'Zen Maru Gothic' !important;
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 $transition: ease, ease-out, ease-in, ease-in-out;
