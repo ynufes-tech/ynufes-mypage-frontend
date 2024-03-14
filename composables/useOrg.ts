@@ -33,9 +33,17 @@ export const useOrg = () => {
   )
 
   const getAccessibleOrgs = async (): Promise<AccessibleOrg[] | null> => {
+    if (accessibleOrgs.value) {
+      return accessibleOrgs.value
+    }
     try {
       const resp = await client.get('/api/v1/orgs')
       if (resp.error) {
+        console.error(resp.error)
+        return null
+      }
+      if (!Array.isArray(resp.data)) {
+        console.error('response is empty')
         return null
       }
       accessibleOrgs.value = resp.data as AccessibleOrg[]
@@ -47,6 +55,9 @@ export const useOrg = () => {
   }
 
   const getOrgInfo = async (orgId: string): Promise<OrgInfo | null> => {
+    if (orgInfo.value) {
+      return orgInfo.value
+    }
     try {
       const resp = await client.get('/api/v1/orgs', { org_id: orgId })
       if (resp.error) {
@@ -59,5 +70,5 @@ export const useOrg = () => {
       return null
     }
   }
-  return { orgInfo, accessibleOrgs, getAccessibleOrgs, getOrgInfo }
+  return { getAccessibleOrgs, getOrgInfo }
 }
