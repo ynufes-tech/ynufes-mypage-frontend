@@ -6,6 +6,7 @@ useHead({
   title: 'Top',
   titleTemplate: (title) => `${title} | YNU-fes`
 })
+const user = await useLogin().getCurrentUser()
 </script>
 <template>
   <div id="dashboard-root-frame" class="util-color-bg-main">
