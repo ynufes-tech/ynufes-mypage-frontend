@@ -24,7 +24,7 @@ const switchOrg = async (orgId: string) => {
 }
 </script>
 <template>
-  <main class="main-content-wrapper">
+  <main>
     <div v-if="accessibleOrgs.length === 0">
       <p class="mx-auto w-fit mt-4 xl:ml-8">
         アクセスできる企画団体が存在しません
