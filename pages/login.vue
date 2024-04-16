@@ -21,56 +21,34 @@ const goAuthURL = async () => {
 }
 </script>
 <template>
-  <div class="page-login">
-    <div class="images">
-      <img src="~/assets/MyPageLogoBig.svg" class="mypage-logo" />
-      <img src="~/assets/LoginImage.svg" class="login-image" />
-      <div class="login-button d-flex">
-        <img src="~/assets/LINE-login-button.svg" @click="goAuthURL()" />
+  <div
+    class="page-login flex flex-column w-screen h-screen justify-content-center align-items-center util-color-bg-main"
+  >
+    <div
+      class="images flex flex-column w-8 justify-content-around align-items-center"
+    >
+      <img
+        src="~/assets/MyPageLogoBig.svg"
+        class="mypage-logo w-9 max-w-16rem"
+        alt="サイトロゴ"
+      />
+      <img
+        src="~/assets/LoginImage.svg"
+        class="login-image w-full max-w-28rem"
+        alt="キービジュアル"
+      />
+      <div class="login-button d-flex w-full">
+        <img
+          src="~/assets/LINE-login-button.svg"
+          @click="goAuthURL()"
+          class="block w-8 max-w-17rem mx-auto my-0"
+          alt="ラインログインボタン"
+        />
       </div>
     </div>
   </div>
 </template>
 <style scoped lang="scss">
-.page-login {
-  width: 100vw;
-  height: 100vh;
-  background-color: #f5f6f4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.images {
-  width: 70vw;
-  height: 60svh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-.mypage-logo {
-  aspect-ratio: 4;
-  width: 60%;
-  min-width: 150px;
-  max-width: 256px;
-}
-.login-image {
-  aspect-ratio: 1;
-  width: 100%;
-  min-width: 150px;
-  max-width: 500px;
-}
-.login-button {
-  width: 100%;
-  > img {
-    aspect-ratio: 3;
-    width: 70%;
-    max-width: 280px;
-    margin: 0 auto;
-    display: block;
-  }
-}
 @media screen and (min-width: 1080px) {
   .images {
     height: 90vh;
