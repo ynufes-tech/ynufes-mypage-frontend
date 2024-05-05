@@ -49,18 +49,26 @@ const useApiClient = () => {
       'Content-Type': 'application/json',
       ...(token ? { Authorization: `Bearer ${token}` } : {})
     }
+    if (typeof body !== 'string') body = JSON.stringify(body)
     return await fetch(`${nuxtConfig.public.baseURL}${url}`, {
       method: 'POST',
       headers,
       body
     })
       .then((resp: any) => {
-        if (resp.ok)
+        if (resp.ok) {
+          let d
+          try {
+            d = resp.json()
+          } catch (e) {
+            d = null
+          }
           return {
-            data: resp.json(),
+            data: d,
             unauthorized: false,
             error: null
           } as BackendResponse
+        }
         if (resp.status === 401) {
           authStore.clearToken()
           authStore.clearUser()
