@@ -32,7 +32,7 @@ export const useLogin = () => {
       const authStore = useAuthStore()
       authStore.setToken(token.token)
     } catch (e) {
-      console.error(e)
+      console.error('error in authWithCode', e)
       return false
     }
     return true
@@ -48,20 +48,17 @@ export const useLogin = () => {
       const user = resp.data as User
       authStore.setUser(user)
     } catch (e) {
-      console.error(e)
+      console.error('error in trySignIn', e)
       return false
     }
     return true
   }
   const getCurrentUser = async (): Promise<User | null> => {
     if (authStore.getUser) {
-      console.log('authStore.getUser is exist', authStore.getUser)
       return authStore.getUser
     }
     if (authStore.getToken) {
-      console.log('authStore.getUser is not exist', authStore.getUser)
       await trySignIn()
-      console.log('after trySignin', authStore.getUser)
       return authStore.getUser
     }
     return null
@@ -83,7 +80,7 @@ export const useLogin = () => {
       authStore.clearUser()
       return true
     } catch (err) {
-      console.error(err)
+      console.error('error in updateUserInfo', err)
       return false
     }
   }
