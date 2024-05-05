@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useLogin } from '~/composables/useLogin'
-import { useUserInfo } from '~/composables/useUserInfo'
 useHead({ title: 'welcome' })
 definePageMeta({
   layout: false
@@ -27,7 +26,7 @@ const submit = async () => {
     gender: Number(gender.value),
     student_id: studentID.value as string
   }
-  await useUserInfo()
+  await useLogin()
     .updateUserInfo(userInfo)
     .then(() => {
       console.log('success')
