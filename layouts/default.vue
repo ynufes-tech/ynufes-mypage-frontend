@@ -9,7 +9,7 @@ useHead({
 const user = await useLogin().getCurrentUser()
 </script>
 <template>
-  <div id="dashboard-root-frame" class="util-color-bg-main">
+  <div id="dashboard-root-frame" class="util-color-bg-main relative">
     <AppSidebar />
     <div id="dashboard-root-content">
       <slot />
