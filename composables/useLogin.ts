@@ -2,6 +2,16 @@
 import useApiClient from '~/composables/useApiClient'
 import { useAuthStore, User } from '~/stores/auth'
 
+export type UserInfo = {
+  name_first: string
+  name_first_kana: string
+  name_last: string
+  name_last_kana: string
+  email: string
+  gender: number
+  student_id: string
+}
+
 export const useLogin = () => {
   const authStore = useAuthStore()
   const authWithCode = async (code: string): Promise<boolean> => {
@@ -22,7 +32,7 @@ export const useLogin = () => {
       const authStore = useAuthStore()
       authStore.setToken(token.token)
     } catch (e) {
-      console.error(e)
+      console.error('error in authWithCode', e)
       return false
     }
     return true
@@ -38,20 +48,17 @@ export const useLogin = () => {
       const user = resp.data as User
       authStore.setUser(user)
     } catch (e) {
-      console.error(e)
+      console.error('error in trySignIn', e)
       return false
     }
     return true
   }
   const getCurrentUser = async (): Promise<User | null> => {
     if (authStore.getUser) {
-      console.log('authStore.getUser is exist', authStore.getUser)
       return authStore.getUser
     }
     if (authStore.getToken) {
-      console.log('authStore.getUser is not exist', authStore.getUser)
       await trySignIn()
-      console.log('after trySignin', authStore.getUser)
       return authStore.getUser
     }
     return null
@@ -60,5 +67,29 @@ export const useLogin = () => {
     authStore.clearToken()
     authStore.clearUser()
   }
-  return { getCurrentUser, signOut, trySignIn, authWithCode }
+
+  // this is client for using credentials
+  const client = useApiClient()
+
+  const updateUserInfo = async (ui: UserInfo): Promise<boolean> => {
+    try {
+      const resp = await client.post('/api/v1/user/info', ui)
+      if (resp.error) {
+        return false
+      }
+      authStore.clearUser()
+      return true
+    } catch (err) {
+      console.error('error in updateUserInfo', err)
+      return false
+    }
+  }
+
+  return {
+    getCurrentUser,
+    signOut,
+    trySignIn,
+    authWithCode,
+    updateUserInfo
+  }
 }
