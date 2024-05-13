@@ -2,142 +2,105 @@
 const props = withDefaults(
   defineProps<{
     title: string
-    status: number
-    deadline: string
+    status: 0 | 1 // 0: 未提出, 1: 提出済み
+    deadline: string // Date.toISOString()を期待している
   }>(),
   {
-    title: '未設定',
+    title: '企画団体説明文提出フォーム',
     status: 0,
-    deadline: '2023年1月11日11:11まで'
+    deadline: '2024-05-31T23:59:59.817Z'
   }
 )
-const statusImage = () => {
-  switch (props.status) {
-    case 1:
-    case 2:
-      return '/icon_check.webp'
-    case 3:
-      return '/icon_waiting.webp'
-    case 4:
-      return '/icon_caution.webp'
-    case 5:
-    default:
-      return '/icon_warning.webp'
-  }
-}
+
 const statusMes = () => {
   switch (props.status) {
     case 1:
-      return '受理済み'
-    case 2:
-      return '提出済み'
-    case 3:
-      return '未提出'
-    case 4:
-      return '期限間近'
-    case 5:
+      return '提出済'
     default:
-      return '締切超過'
+      return '未提出'
+  }
+}
+/**
+ * 〆切までの日数を計算する
+ */
+const calcDayLeft = (ISOString: string): number => {
+  const date = new Date(ISOString)
+  const now = new Date()
+  const diff = date.getTime() - now.getTime()
+  return Number((diff / (1000 * 60 * 60 * 24)).toFixed(2))
+}
+
+const deadlineMes = (ISOString: string) => {
+  const day = calcDayLeft(ISOString)
+  if (day >= 28) {
+    return '1ヶ月後〆切'
+  } else if (day >= 21) {
+    return '3週間後〆切'
+  } else if (day >= 14) {
+    return '2週間後〆切'
+  } else if (day >= 7) {
+    return '1週間後〆切'
+  } else if (day >= 1 && day <= 6) {
+    return `${Math.floor(day)}日後〆切`
+  } else if (day >= 0 && day < 1) {
+    return '本日〆切'
+  } else {
+    return '〆切超過'
   }
 }
 
-const statusColor = () => {
-  switch (props.status) {
-    case 1:
-      return '#b3eccf'
-    case 2:
-      return '#4CAF50'
-    case 3:
-      return '#1edfe5'
-    case 4:
-      return '#f1bc35'
-    case 5:
-    default:
-      return '#e73b14'
+/**
+ * 〆切までの日数に応じたアイコンを返す
+ *
+ */
+const deadlineIconSrc = (ISOString: string): string => {
+  const day = calcDayLeft(ISOString)
+  if (day >= 28) {
+    return '/clock_icon/clock_loader_10.svg'
+  } else if (day >= 21) {
+    return '/clock_icon/clock_loader_20.svg'
+  } else if (day >= 14) {
+    return '/clock_icon/clock_loader_40.svg'
+  } else if (day >= 7) {
+    return '/clock_icon/clock_loader_60.svg'
+  } else if (day >= 1 && day <= 6) {
+    return '/clock_icon/clock_loader_80.svg'
+  } else if (day >= 0 && day < 1) {
+    return '/clock_icon/clock_loader_90.svg'
+  } else {
+    return '/clock_icon/clock_loader_block.svg'
   }
 }
 </script>
 <template>
-  <div class="form-card" :style="{ '--statusColor': statusColor() }">
-    <h2>
-      <span>{{ title }}</span>
-    </h2>
-    <hr />
-    <div class="status_row">
-      <img alt="status_icon" class="status_icon" :src="statusImage()" />
-      <div class="status_message">{{ statusMes() }}</div>
+  <div
+    class="form-status-card w-8rem util-color-border-text border-round-xl border-1 border-solid"
+    :class="status ? 'util-color-bg-primary' : 'util-color-bg-danger'"
+    style="height: 7.5rem"
+  >
+    <div
+      class="ml-2 pl-1 util-color-bg-sub h-full flex flex-column justify-content-between"
+      style="
+        border-top-right-radius: 0.68rem;
+        border-bottom-right-radius: 0.68rem;
+      "
+    >
+      <h2 class="pt-2 font-bold text-sm h-2rem">
+        {{ title }}
+      </h2>
+      <div
+        class="status_message font-bold text-sm"
+        :class="status ? 'util-color-text-primary' : 'util-color-text-danger'"
+      >
+        {{ statusMes() }}
+      </div>
+      <div class="flex align-items-center">
+        <img :src="deadlineIconSrc(deadline)" alt="" width="16" height="16" />
+        <div class="deadline_field text-xs">
+          {{ deadlineMes(deadline) }}
+        </div>
+      </div>
     </div>
-    <div class="deadline_field">{{ deadline }}</div>
   </div>
 </template>
-<style scoped lang="scss">
-.form-card::before {
-  background: var(--statusColor);
-  content: '';
-  position: absolute;
-  width: 20px;
-  display: flex;
-  left: 0;
-  height: 100%;
-}
-
-.form-card {
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s;
-  font-weight: bold;
-  position: relative;
-  border-radius: 20px;
-  padding-left: 20px;
-  width: 200px;
-  height: 200px;
-  aspect-ratio: 1;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-
-  > hr {
-    margin: 0 10px;
-  }
-
-  h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 20px;
-    padding: 8px;
-    height: 50%;
-  }
-
-  .status_row {
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-    width: 180px;
-
-    .status_icon {
-      width: 50px;
-      margin: 10px;
-      aspect-ratio: 1;
-    }
-
-    .status_message {
-      margin: auto 0;
-      font-size: 20px;
-      width: 100px;
-      text-align: center;
-    }
-  }
-
-  .deadline_field {
-    margin: auto 0;
-    font-size: 12px;
-    text-align: center;
-  }
-
-  &:hover {
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    scale: 0.99;
-  }
-}
-</style>
+<style scoped lang="scss"></style>
