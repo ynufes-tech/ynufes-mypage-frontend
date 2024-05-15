@@ -25,6 +25,30 @@ const switchOrg = async (orgId: string) => {
 </script>
 <template>
   <main>
+    <div class="p-2 overflow-x-scroll w-full white-space-nowrap">
+      <FormStatusCard
+        class="mr-2 inline-block white-space-normal"
+        :status="0"
+        :deadline="new Date('2024-05-15T23:59:59').toISOString()"
+      />
+      <FormStatusCard
+        title="物品貸借申請フォーム"
+        class="mr-2 inline-block white-space-normal"
+        :status="1"
+        :deadline="new Date(2024, 5, 8, 12, 12).toISOString() /**6/1 */"
+      />
+      <FormStatusCard
+        title="目安箱フォーム"
+        class="mr-2 inline-block white-space-normal"
+        :status="1"
+        :deadline="new Date(2024, 4, 1, 12, 12).toISOString() /**6/1 */"
+      />
+      <FormStatusCard
+        class="mr-2 inline-block white-space-normal"
+        :status="0"
+        :deadline="new Date(2024, 4, 15, 12, 12).toISOString() /** 7/30 */"
+      />
+    </div>
     <div v-if="accessibleOrgs.length === 0">
       <p class="mx-auto w-fit mt-4 xl:ml-8">
         アクセスできる企画団体が存在しません
