@@ -29,6 +29,9 @@ classベースでデザインするためによく使うstyleをクラス化す�
 .util-color-border {
   border: colors.$input-border;
 }
+.util-color-border-text {
+  border: colors.$text;
+}
 .util-color-border-primary {
   border: colors.$primary;
 }
