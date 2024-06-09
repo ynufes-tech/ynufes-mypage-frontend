@@ -47,3 +47,12 @@ classベースでデザインするためによく使うstyleをクラス化す�
 .font-family-main {
   font-family: 'Zen Maru Gothic', sans-serif;
 }
+
+.util-ha-color-bg-main {
+  &:hover {
+    background-color: colors.$main-background;
+  }
+  &:active {
+    background-color: colors.$main-background;
+  }
+}
